@@ -1,0 +1,17 @@
+[project]
+id = "fasade"
+
+[api]
+enabled = true
+
+[db]
+major_version = 15
+
+[storage]
+enabled = true
+
+[functions.analyze-ritual]
+verify_jwt = true
+
+[functions.recalculate-ep]
+verify_jwt = true

@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+
+  --color-cream: #fdf8f5;
+  --color-blush: #f5e6e0;
+  --color-blush-light: #faf0ec;
+  --color-rose: #e8b4b8;
+  --color-rose-deep: #c4848a;
+  --color-plum: #5c3d4e;
+  --color-charcoal: #2d2429;
+  --color-gold: #c9a96e;
+  --color-lavender: #e8e0f0;
+  --color-mist: #f0ebe8;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream font-sans text-charcoal antialiased;
+  }
+
+  ::selection {
+    @apply bg-rose/40 text-charcoal;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-rose-deep via-plum to-rose-deep bg-clip-text text-transparent;
+  }
+
+  .glass {
+    @apply border border-white/60 bg-white/70 backdrop-blur-xl;
+  }
+
+  .section-padding {
+    @apply px-5 py-20 sm:px-8 md:py-28 lg:px-12;
+  }
+}
