@@ -8,8 +8,8 @@ export function FutureVision() {
     <SectionWrapper background="blush">
       <SectionHeader
         eyebrow="Coming Soon"
-        title="The future of personalized beauty"
-        subtitle="We're building the world's most personalized beauty improvement platform — and you're invited to shape it."
+        title="The future of personalized skincare tracking"
+        subtitle="We're building the most objective way to measure whether your routine is working — and you're invited to shape it."
       />
 
       <StaggerContainer className="flex flex-wrap justify-center gap-3">
@@ -26,7 +26,7 @@ export function FutureVision() {
       <FadeIn className="mt-12">
         <div className="mx-auto max-w-2xl rounded-2xl bg-gradient-to-r from-plum/5 via-rose/10 to-gold/10 p-8 text-center">
           <p className="font-display text-xl font-medium text-charcoal sm:text-2xl">
-            Beauty scores. Progress dashboards. Routine optimization. AI coaching.
+            Skin progress scores. Improvement tracking. Routine optimization. AI coaching.
           </p>
           <p className="mt-3 text-sm text-charcoal/60">
             All personalized to your unique skin journey.

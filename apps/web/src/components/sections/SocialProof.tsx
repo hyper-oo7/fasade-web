@@ -22,7 +22,7 @@ export function SocialProof() {
             </div>
 
             <h2 className="font-display text-2xl font-semibold leading-snug sm:text-3xl md:text-4xl">
-              Be among the first women helping shape the future of personalized beauty.
+              Be among the first women helping shape the future of objective skincare tracking.
             </h2>
 
             <p className="mx-auto mt-4 max-w-lg text-sm leading-relaxed text-white/75 sm:text-base">

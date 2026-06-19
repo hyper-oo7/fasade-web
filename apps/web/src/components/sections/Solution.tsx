@@ -8,7 +8,7 @@ export function Solution() {
       <SectionHeader
         eyebrow="How It Works"
         title="Four steps to visible progress"
-        subtitle="Fasade turns your daily selfie into actionable beauty intelligence."
+        subtitle="Fasade turns your daily selfie into actionable skin health intelligence."
       />
 
       <StaggerContainer className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">

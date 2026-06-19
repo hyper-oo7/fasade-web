@@ -28,8 +28,8 @@ export function Features() {
     <SectionWrapper id="features" background="white">
       <SectionHeader
         eyebrow="Features"
-        title="Everything you need to measure beauty progress"
-        subtitle="Built for women who want personalized insights — not generic beauty advice."
+        title="Everything you need to track skincare progress"
+        subtitle="Built for women who want objective insights into what's actually working — not generic skincare advice."
       />
 
       <StaggerContainer className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">

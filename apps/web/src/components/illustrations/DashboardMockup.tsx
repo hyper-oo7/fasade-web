@@ -8,7 +8,7 @@ import {
 } from 'lucide-react'
 
 const metrics = [
-  { label: 'Beauty Score', value: '87', change: '+12', icon: Sparkles, color: 'text-rose-deep' },
+  { label: 'Skin Progress Score', value: '87', change: '+12', icon: Sparkles, color: 'text-rose-deep' },
   { label: 'Hydration', value: '92%', change: '+8%', icon: Droplets, color: 'text-blue-400' },
   { label: 'Skin Clarity', value: '84', change: '+15', icon: Sun, color: 'text-gold' },
   { label: 'Texture', value: '79', change: '+6', icon: CircleDot, color: 'text-plum' },
@@ -33,7 +33,7 @@ export function DashboardMockup() {
               <p className="text-xs font-medium uppercase tracking-wider text-charcoal/50">
                 Your Dashboard
               </p>
-              <p className="font-display text-lg font-semibold text-plum">Beauty Progress</p>
+              <p className="font-display text-lg font-semibold text-plum">Progress Tracking</p>
             </div>
             <div className="flex items-center gap-1 rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-600">
               <TrendingUp size={12} />
@@ -67,7 +67,7 @@ export function DashboardMockup() {
           <div className="rounded-2xl bg-white/80 p-4 shadow-sm">
             <div className="mb-3 flex items-center justify-between">
               <p className="text-xs font-medium text-charcoal/50">30-Day Trend</p>
-              <p className="text-xs font-semibold text-rose-deep">Beauty Score</p>
+              <p className="text-xs font-semibold text-rose-deep">Skin Progress Score</p>
             </div>
             <div className="flex items-end gap-1.5" style={{ height: 80 }}>
               {chartBars.map((height, i) => (

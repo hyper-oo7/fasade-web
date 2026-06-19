@@ -9,7 +9,7 @@ export function Footer() {
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-8 md:flex-row md:justify-between">
         <div className="text-center md:text-left">
           <p className="font-display text-2xl font-semibold text-plum">Fasade</p>
-          <p className="mt-1 text-sm text-charcoal/60">Measure Your Beauty Progress.</p>
+          <p className="mt-1 text-sm text-charcoal/60">Track Your Skincare Progress.</p>
         </div>
 
         <nav className="flex flex-wrap justify-center gap-6" aria-label="Footer navigation">

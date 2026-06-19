@@ -1,8 +1,10 @@
 import { Navbar } from './components/layout/Navbar'
 import { Footer } from './components/layout/Footer'
 import { Hero } from './components/sections/Hero'
+import { Trust } from './components/sections/Trust'
 import { Problem } from './components/sections/Problem'
 import { Solution } from './components/sections/Solution'
+import { BeforeAfterShowcase } from './components/sections/BeforeAfterShowcase'
 import { Features } from './components/sections/Features'
 import { FutureVision } from './components/sections/FutureVision'
 import { SocialProof } from './components/sections/SocialProof'
@@ -22,8 +24,10 @@ function App() {
       <Navbar />
       <main id="main-content">
         <Hero />
+        <Trust />
         <Problem />
         <Solution />
+        <BeforeAfterShowcase />
         <Features />
         <FutureVision />
         <SocialProof />

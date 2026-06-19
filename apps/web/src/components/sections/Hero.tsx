@@ -1,7 +1,8 @@
-import { ArrowRight, Sparkles } from 'lucide-react'
+import { Sparkles } from 'lucide-react'
 import { Button } from '../ui/Button'
 import { FadeIn } from '../ui/FadeIn'
-import { DashboardMockup } from '../illustrations/DashboardMockup'
+import { WaitlistForm } from '../ui/WaitlistForm'
+import { HeroAppMockups } from '../illustrations/HeroAppMockups'
 import { useScrollToSection } from '../../hooks/useScrollToSection'
 
 export function Hero() {
@@ -20,46 +21,44 @@ export function Hero() {
           <FadeIn delay={0.1}>
             <div className="mb-6 inline-flex items-center gap-2 rounded-full glass px-4 py-2 text-sm text-plum">
               <Sparkles size={14} className="text-rose-deep" />
-              <span>AI-Powered Beauty Tracking</span>
+              <span>AI-Powered Skin Progress Tracking</span>
             </div>
           </FadeIn>
 
           <FadeIn delay={0.2}>
             <h1 className="font-display text-4xl font-semibold leading-[1.1] tracking-tight text-charcoal sm:text-5xl md:text-6xl">
-              Your Personal{' '}
-              <span className="text-gradient">AI Beauty</span>{' '}
-              Companion
+              Know if your skincare is{' '}
+              <span className="text-gradient">actually working.</span>
             </h1>
           </FadeIn>
 
           <FadeIn delay={0.3}>
             <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-charcoal/70 sm:text-lg lg:mx-0">
-              Upload a daily selfie, track visible changes, discover what works, and improve
-              your beauty routine with personalized AI insights.
+              Track visible skin improvements, monitor product effectiveness, and stop guessing
+              whether your routine is delivering results.
             </p>
           </FadeIn>
 
           <FadeIn delay={0.4}>
-            <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row lg:justify-start">
-              <Button size="lg" onClick={() => scrollTo('waitlist')}>
-                Join the Waitlist
-                <ArrowRight size={18} />
-              </Button>
-              <Button variant="secondary" size="lg" onClick={() => scrollTo('solution')}>
-                See How It Works
-              </Button>
+            <div className="mt-8">
+              <WaitlistForm source="hero" inputId="hero-waitlist-email" variant="hero" />
             </div>
           </FadeIn>
 
           <FadeIn delay={0.5}>
-            <p className="mt-6 text-sm text-charcoal/50">
+            <div className="mt-4 flex flex-col items-center gap-3 sm:flex-row lg:justify-start">
+              <Button variant="ghost" size="sm" onClick={() => scrollTo('solution')}>
+                See How It Works →
+              </Button>
+            </div>
+            <p className="mt-4 text-sm text-charcoal/50">
               Free to join · Early access for waitlist members
             </p>
           </FadeIn>
         </div>
 
         <FadeIn delay={0.2} direction="left">
-          <DashboardMockup />
+          <HeroAppMockups />
         </FadeIn>
       </div>
     </section>
