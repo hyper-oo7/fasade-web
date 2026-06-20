@@ -93,10 +93,19 @@ export function UserResearchForm() {
       setSubmitError(result.error ?? 'Something went wrong. Please try again.')
       return
     }
-
+    
+    await fetch('/api/survey-thanks', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        email: form.email.trim().toLowerCase(),
+      }),
+    })
+    
     setSubmitted(true)
     setForm(initialForm)
-  }
 
   if (submitted) {
     return (

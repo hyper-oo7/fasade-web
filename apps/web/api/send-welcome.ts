@@ -25,8 +25,9 @@ export default async function handler(req: any, res: any) {
         <li>Founder updates</li>
         <li>Special launch rewards</li>
         </ul>
-        <p>Please fill the survey form on the website to help us build the best product for you.</p>
-        <p>Your feedback will directly shape what we build next.</p>
+        <p>Before we build Fasade, we'd love one quick input from you.<p>
+        <p>Your answer will directly influence what we launch first.<p>
+       
 
         <p>
           <a
