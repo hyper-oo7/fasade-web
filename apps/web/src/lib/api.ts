@@ -64,7 +64,23 @@ export async function submitWaitlistEmail(
       source,
     })
 
-    if (!error) return { success: true }
+    if (!error) {
+      try {
+        await fetch('/api/send-welcome', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            email: normalized,
+          }),
+        })
+      } catch (e) {
+        console.error('Email send failed', e)
+      }
+    
+      return { success: true }
+    }
 
     if (error.code === '23505') {
       return { success: true }
