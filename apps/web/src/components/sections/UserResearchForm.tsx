@@ -106,7 +106,8 @@ export function UserResearchForm() {
     
     setSubmitted(true)
     setForm(initialForm)
-
+  }
+  
   if (submitted) {
     return (
       <SectionWrapper id="research" background="white">
