@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { ArrowRight, TrendingUp, Droplets, Sun, CircleDot } from 'lucide-react'
 import { SectionWrapper, SectionHeader } from '../layout/SectionWrapper'
 import { FadeIn, StaggerContainer, StaggerItem } from '../ui/FadeIn'
-import { PhoneFrame, AbstractFacePlaceholder } from '../illustrations/PhoneFrame'
+import { PhoneFrame } from '../illustrations/PhoneFrame'
 
 const beforeMetrics = [
   { label: 'Progress Score', value: '62', icon: TrendingUp },
@@ -57,8 +57,25 @@ function ComparisonCard({
         <p className="font-display text-lg font-semibold text-plum">{subtitle}</p>
       </div>
 
-      <div className="p-5">
-        <AbstractFacePlaceholder variant={variant} className="mb-4" />
+      <div className="relative mb-4 overflow-hidden rounded-2xl">
+        <img
+          src={variant === 'before' ? '/before-face.jpg' : '/after-face.jpg'}
+          alt={variant === 'before' ? 'Before' : 'After'}
+         className="h-[280px] w-full object-cover"
+        />
+
+       <div
+         className={`absolute left-3 top-3 rounded-full px-3 py-1 text-xs font-bold text-white ${
+           variant === 'before'
+             ? 'bg-red-500'
+             : 'bg-emerald-500'
+          }`}
+     >
+          {variant === 'before'
+           ? 'BEFORE · Day 1'
+           : 'AFTER · Week 8'}
+       </div>
+      </div>
 
         <div className="grid grid-cols-2 gap-2">
           {metrics.map((m) => (
@@ -152,14 +169,14 @@ export function BeforeAfterShowcase() {
       <SectionHeader
         eyebrow="See the Difference"
         title="Progress you'd never notice on your own"
-        subtitle="Real skincare improvements happen gradually. Fasade makes them visible — with design mockups like these, not guesswork."
+        subtitle="Track subtle changes in skin health over time with objective visual comparisons and progress insights."
       />
 
       <div className="mb-10 flex items-center justify-center gap-3">
         <span className="rounded-full bg-blush px-3 py-1 text-xs font-medium text-plum">
-          Design mockups only
+          AI-generated example
         </span>
-        <span className="text-xs text-charcoal/45">No real user photos</span>
+        <span className="text-xs text-charcoal/45">Illustrative example</span>
       </div>
 
       <StaggerContainer className="grid gap-8 lg:grid-cols-2 lg:gap-10">
@@ -201,8 +218,7 @@ export function BeforeAfterShowcase() {
 
       <FadeIn className="mt-10 text-center">
         <p className="mx-auto max-w-xl text-sm italic text-charcoal/50">
-          These are illustrative design mockups showing how Fasade surfaces gradual skin
-          improvements that daily mirror checks miss.
+        These examples demonstrate how Fasade could visualize gradual skin changes over time.
         </p>
       </FadeIn>
     </SectionWrapper>
