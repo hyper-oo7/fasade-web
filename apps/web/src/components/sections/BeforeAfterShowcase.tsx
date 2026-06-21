@@ -63,7 +63,7 @@ function ComparisonCard({
         <img
           src={variant === 'before' ? '/before-face.png' : '/after-face.png'}
           alt={variant === 'before' ? 'Before' : 'After'}
-         className="block h-[280px] w-full object-cover"
+         className="block h-[380px] w-full object-cover object-top"
         />
 
        <div
