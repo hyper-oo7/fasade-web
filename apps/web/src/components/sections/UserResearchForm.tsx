@@ -36,7 +36,7 @@ const beautyConcerns = [
   'Fine lines & aging',
   'Hair health',
   'Overall skin texture',
-  'Other (please specify)',
+  'Other',
 ] as const
 const selfieFrequencies = ['Daily', 'A few times a week', 'Weekly', 'Rarely', 'Never'] as const
 const yesNoMaybe = ['Yes', 'No', 'Maybe'] as const
@@ -86,7 +86,7 @@ export function UserResearchForm() {
       wouldUploadDaily: form.wouldUploadDaily as YesNoMaybe,
       wouldPayMonthly: form.wouldPayMonthly as YesNoMaybe,
       comments: 
-       form.beautyConcern ==='Other (please specify)'
+       form.beautyConcern ==='Other'
        ? otherConcern.trim()
        : form.comments.trim(),
     })
@@ -193,7 +193,7 @@ export function UserResearchForm() {
          </div>
 
 
-            {form.beautyConcern === 'Other (please specify)' && (
+            {form.beautyConcern === 'Other' && (
             <Textarea
               label="Please tell us your beauty concern"
               value={otherConcern}
