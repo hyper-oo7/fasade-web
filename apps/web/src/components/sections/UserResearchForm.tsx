@@ -36,7 +36,7 @@ const beautyConcerns = [
   'Fine lines & aging',
   'Hair health',
   'Overall skin texture',
-  'Other',
+  'Other (please specify)',
 ] as const
 const selfieFrequencies = ['Daily', 'A few times a week', 'Weekly', 'Rarely', 'Never'] as const
 const yesNoMaybe = ['Yes', 'No', 'Maybe'] as const
@@ -47,6 +47,7 @@ export function UserResearchForm() {
   const [submitted, setSubmitted] = useState(false)
   const [submitting, setSubmitting] = useState(false)
   const [submitError, setSubmitError] = useState('')
+  const [otherConcern, setOtherConcern] = useState('')
 
   const update = (field: keyof SurveyFormData, value: string) => {
     setForm((prev) => ({ ...prev, [field]: value }))
@@ -84,7 +85,10 @@ export function UserResearchForm() {
       tracksSkincare: form.tracksSkincare as YesNoMaybe,
       wouldUploadDaily: form.wouldUploadDaily as YesNoMaybe,
       wouldPayMonthly: form.wouldPayMonthly as YesNoMaybe,
-      comments: form.comments.trim(),
+      comments: 
+       form.beautyConcern ==='Other (please specify)'
+       ? otherConcern.trim()
+       : form.comments.trim(),
     })
 
     setSubmitting(false)
@@ -106,6 +110,7 @@ export function UserResearchForm() {
     
     setSubmitted(true)
     setForm(initialForm)
+    setOtherConcern('')
   }
   
   if (submitted) {
@@ -182,7 +187,21 @@ export function UserResearchForm() {
               error={errors.beautyConcern}
               required
             />
-          </div>
+            <p className="text-red-500">
+             {form.beautyConcern}
+            </p>
+         </div>
+
+
+            {form.beautyConcern === 'Other (please specify)' && (
+            <Textarea
+              label="Please tell us your beauty concern"
+              value={otherConcern}
+              onChange={(e) => setOtherConcern(e.target.value)}
+              placeholder="Describe your concern..."
+            />
+       )}
+          
 
           <Select
             label="How often do you take selfies?"

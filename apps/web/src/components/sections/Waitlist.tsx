@@ -19,7 +19,12 @@ export function Waitlist() {
             Be the first to know if your skincare is actually working. Early members get priority
             access and exclusive features.
           </p>
-
+          
+          <div className="mt-4 rounded-xl bg-emerald-50 px-4 py-3">
+            <p className="text-sm font-semibold text-emerald-700">
+            Be among the first women helping shape Fasade
+            </p>
+          </div>
           <div className="mt-8">
             <WaitlistForm source="waitlist-section" inputId="waitlist-email" variant="section" />
           </div>
