@@ -57,6 +57,8 @@ function ComparisonCard({
         <p className="font-display text-lg font-semibold text-plum">{subtitle}</p>
       </div>
 
+      <div className="p-5">
+
       <div className="relative mb-4 overflow-hidden rounded-2xl">
         <img
           src={variant === 'before' ? '/before-face.jpg' : '/after-face.jpg'}
