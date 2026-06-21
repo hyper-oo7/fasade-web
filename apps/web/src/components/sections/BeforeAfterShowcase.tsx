@@ -5,14 +5,14 @@ import { FadeIn, StaggerContainer, StaggerItem } from '../ui/FadeIn'
 import { PhoneFrame } from '../illustrations/PhoneFrame'
 
 const beforeMetrics = [
-  { label: 'Progress Score', value: '62', icon: TrendingUp },
+  { label: 'Fasade Score', value: '62', icon: TrendingUp },
   { label: 'Hydration', value: '71%', icon: Droplets },
   { label: 'Clarity', value: '58', icon: Sun },
   { label: 'Texture', value: '65', icon: CircleDot },
 ]
 
 const afterMetrics = [
-  { label: 'Progress Score', value: '84', icon: TrendingUp, change: '+22' },
+  { label: 'Fasade Score', value: '84', icon: TrendingUp, change: '+22' },
   { label: 'Hydration', value: '89%', icon: Droplets, change: '+18%' },
   { label: 'Clarity', value: '79', icon: Sun, change: '+21' },
   { label: 'Texture', value: '78', icon: CircleDot, change: '+13' },
