@@ -61,9 +61,9 @@ function ComparisonCard({
 
       <div className="relative mb-4 overflow-hidden rounded-2xl">
         <img
-          src={variant === 'before' ? '/before-face.jpg' : '/after-face.jpg'}
+          src={variant === 'before' ? '/before-face.png' : '/after-face.png'}
           alt={variant === 'before' ? 'Before' : 'After'}
-         className="h-[280px] w-full object-cover"
+         className="block h-[280px] w-full object-cover"
         />
 
        <div
