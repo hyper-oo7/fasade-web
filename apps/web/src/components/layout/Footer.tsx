@@ -37,11 +37,11 @@ export function Footer() {
             <h3 className="font-display text-lg font-semibold text-charcoal mb-2">Knowledge Base</h3>
             {[
               { label: 'Timelines (How Long?)', path: '/blog#timeline' },
-              { label: 'Specific Concerns', path: '/blog#concern' },
-              { label: 'Ingredient Mixing', path: '/blog#mixing' },
-              { label: 'Comparisons', path: '/blog#comparison' },
-              { label: 'Troubleshooting', path: '/blog#troubleshooting' },
-              { label: 'View All 100+ Guides', path: '/blog', className: 'text-plum font-medium mt-2' },
+              { label: 'Longevity & Biotech', path: '/blog#longevity-biotech' },
+              { label: 'Microbiome & Barrier', path: '/blog#microbiome-barrier' },
+              { label: 'Ingredient Mixing', path: '/blog#combinations' },
+              { label: 'Specific Concerns', path: '/blog#ingredient-focus' },
+              { label: 'View All 150+ Guides', path: '/blog', className: 'text-plum font-medium mt-2' },
             ].map((link) => (
               <a
                 key={link.label}

@@ -9,6 +9,7 @@ import { Features } from '../components/sections/Features'
 import { FutureVision } from '../components/sections/FutureVision'
 import { SocialProof } from '../components/sections/SocialProof'
 import { UserResearchForm } from '../components/sections/UserResearchForm'
+import { BlogTeaser } from '../components/sections/BlogTeaser'
 import { Waitlist } from '../components/sections/Waitlist'
 import { FAQ } from '../components/sections/FAQ'
 
@@ -32,6 +33,7 @@ export default function Home() {
         <FutureVision />
         <SocialProof />
         <UserResearchForm />
+        <BlogTeaser />
         <Waitlist />
         <FAQ />
       </main>

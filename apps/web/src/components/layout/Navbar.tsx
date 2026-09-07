@@ -8,6 +8,7 @@ import { useScrollToSection } from '../../hooks/useScrollToSection'
 const navLinks = [
   { label: 'How It Works', id: 'solution' },
   { label: 'Features', id: 'features' },
+  { label: 'Knowledge Base', href: '/blog' },
   { label: 'Research', id: 'research' },
   { label: 'FAQ', id: 'faq' },
 ]
@@ -48,13 +49,23 @@ export function Navbar() {
 
         <div className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) => (
-            <button
-              key={link.id}
-              onClick={() => handleNav(link.id)}
-              className="text-sm font-medium text-charcoal/70 transition-colors hover:text-plum"
-            >
-              {link.label}
-            </button>
+            link.href ? (
+              <a
+                key={link.label}
+                href={link.href}
+                className="text-sm font-medium text-charcoal/70 transition-colors hover:text-plum"
+              >
+                {link.label}
+              </a>
+            ) : (
+              <button
+                key={link.id}
+                onClick={() => handleNav(link.id!)}
+                className="text-sm font-medium text-charcoal/70 transition-colors hover:text-plum"
+              >
+                {link.label}
+              </button>
+            )
           ))}
           <Button size="sm" onClick={() => handleNav('waitlist')}>
             Join Waitlist
@@ -81,13 +92,24 @@ export function Navbar() {
           >
             <div className="flex flex-col gap-1 px-5 py-4">
               {navLinks.map((link) => (
-                <button
-                  key={link.id}
-                  onClick={() => handleNav(link.id)}
-                  className="rounded-lg px-3 py-3 text-left text-sm font-medium text-charcoal/80 hover:bg-blush/50"
-                >
-                  {link.label}
-                </button>
+                link.href ? (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    onClick={() => setMobileOpen(false)}
+                    className="rounded-lg px-3 py-3 text-left text-sm font-medium text-charcoal/80 hover:bg-blush/50"
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <button
+                    key={link.id}
+                    onClick={() => handleNav(link.id!)}
+                    className="rounded-lg px-3 py-3 text-left text-sm font-medium text-charcoal/80 hover:bg-blush/50"
+                  >
+                    {link.label}
+                  </button>
+                )
               ))}
               <Button
                 fullWidth
