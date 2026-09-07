@@ -1,0 +1,19 @@
+name: Keep Supabase Awake
+
+on:
+  schedule:
+    # Runs at 00:00 every 5 days to prevent Supabase from pausing inactive free tier projects
+    - cron: '0 0 */5 * *'
+  workflow_dispatch: # Allows you to manually trigger it from the GitHub Actions tab if needed
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Supabase REST API
+        run: |
+          echo "Pinging Supabase to prevent inactivity pause..."
+          curl -s -o /dev/null -w "HTTP Status: %{http_code}\n" \
+          -H "apikey: sb_publishable_EXiCAPLJFL-V53CQPp_sgA_69EyDwIx" \
+          -H "Authorization: Bearer sb_publishable_EXiCAPLJFL-V53CQPp_sgA_69EyDwIx" \
+          "https://sgrthhyspswescnucijc.supabase.co/rest/v1/"
