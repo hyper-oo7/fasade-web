@@ -53,21 +53,20 @@ const ingredientFacts = {
     ],
     concentrations: [
       { percentage: '2%', detail: 'Excellent for barrier repair and hydration with minimal irritation. Best for sensitive skin or rosacea.' },
-      { percentage: '4%-5%', detail: 'The clinically proven sweet spot for hyperpigmentation, acne, and texture without excessive irritation.' },
-      { percentage: '10%+', detail: 'Often used for stubborn oil control and severe pores, but dramatically increases the risk of irritation, redness, and contact dermatitis.' }
+      { percentage: '4–5%', detail: 'Concentrations commonly studied in clinical research, with evidence for improvements in concerns such as pigmentation and signs of photoaging. Results depend on the formulation and skin concern.' }
     ],
     purgingBehavior: 'Niacinamide does not increase cellular turnover, so it does not cause purging. If you experience breakouts, it is an irritation or allergic reaction to the formulation, not a purge.',
     worksWith: ['Retinol', 'Vitamin C', 'Salicylic Acid', 'Azelaic Acid'],
     combinationsTable: [
       { combo: 'Niacinamide + Retinol', detail: 'Excellent. Niacinamide strengthens the barrier and reduces the inflammation typically caused by retinol.' },
-      { combo: 'Niacinamide + Vitamin C', detail: 'Safe in modern formulations. Can be used together for maximum brightening, despite outdated myths about them canceling each other out.' },
+      { combo: 'Niacinamide + Vitamin C', detail: 'Safe in modern formulations. Can be used together for maximum brightening.' },
       { combo: 'Niacinamide + Salicylic Acid', detail: 'Powerful for acne and oil control. Niacinamide reduces the inflammation of acne while BHA clears the pore.' }
     ],
     citations: [
-      'Bissett DL, et al. (2004). Niacinamide: A B vitamin that improves aging facial skin appearance. Dermatologic Surgery.',
-      'Navarrete-Solís J, et al. (2011). A Double-Blind, Randomized Clinical Trial of Niacinamide 4% versus Hydroquinone 4% in the Treatment of Melasma. Dermatology Research and Practice.'
+      '[Bissett DL et al. — 5% topical niacinamide clinical trial (12 weeks)](https://pubmed.ncbi.nlm.nih.gov/16029679/)',
+      '[Navarrete-Solís J et al. — 4% niacinamide vs hydroquinone for melasma (8 weeks)](https://pubmed.ncbi.nlm.nih.gov/21822427/)'
     ],
-    concerns: ['Acne', 'Dark Spots', 'Large Pores', 'Oil Control', 'Uneven Texture']
+    concerns: ['Acne', 'Dark Spots', 'Oil Control', 'Pores', 'Texture']
   },
   'Retinol': {
     scientific: true,
@@ -81,18 +80,18 @@ const ingredientFacts = {
     concentrations: [
       { percentage: '0.1% - 0.3%', detail: 'Ideal for beginners and those with sensitive skin to build tolerance.' },
       { percentage: '0.5%', detail: 'The standard concentration for visible anti-aging and texture improvements.' },
-      { percentage: '1.0%', detail: 'High strength. Should only be used by experienced users whose skin has fully retinized to avoid severe dermatitis.' }
+      { percentage: '1.0%', detail: 'High strength. Should only be used by experienced users whose skin has fully retinized.' }
     ],
     purgingBehavior: 'Retinol explicitly accelerates cellular turnover. Because of this, it frequently causes purging (bringing microcomedones to the surface as active breakouts) which can last 2-6 weeks.',
     worksWith: ['Niacinamide', 'Hyaluronic Acid', 'Peptides', 'Ceramides'],
     combinationsTable: [
       { combo: 'Retinol + Niacinamide', detail: 'Highly recommended. Niacinamide builds the barrier to tolerate the retinization process.' },
-      { combo: 'Retinol + AHA/BHA', detail: 'Caution. Using both simultaneously dramatically increases the risk of barrier damage. Use them on alternating nights.' },
-      { combo: 'Retinol + Vitamin C', detail: 'Best separated. Use Vitamin C in the morning for antioxidant protection and Retinol at night for cellular repair.' }
+      { combo: 'Retinol + AHA/BHA', detail: 'Caution. Using both simultaneously increases the risk of barrier damage. Use them on alternating nights.' },
+      { combo: 'Retinol + Vitamin C', detail: 'Best separated. Use Vitamin C in the morning for antioxidant protection and Retinol at night.' }
     ],
     citations: [
-      'Zasada M, Budzisz E. (2019). Retinoids: active molecules influencing skin structure formation in cosmetic and dermatological treatments. Postepy Dermatol Alergol.',
-      'Kafi R, et al. (2007). Improvement of naturally aged skin with vitamin A (retinol). Arch Dermatol.'
+      '[Zasada M, Budzisz E. — Retinoids: active molecules influencing skin structure (2019)](https://pubmed.ncbi.nlm.nih.gov/31558904/)',
+      '[Kafi R et al. — Improvement of naturally aged skin with vitamin A (2007)](https://pubmed.ncbi.nlm.nih.gov/17515510/)'
     ],
     concerns: ['Anti Aging', 'Texture', 'Dark Spots', 'Acne', 'Large Pores']
   },
@@ -107,19 +106,17 @@ const ingredientFacts = {
     ],
     concentrations: [
       { percentage: '5-10%', detail: 'Good for sensitive skin or beginners, particularly in L-ascorbic acid formulations.' },
-      { percentage: '15-20%', detail: 'The clinically proven optimal range for maximizing collagen production and pigment inhibition.' },
-      { percentage: '20%+', detail: 'Offers no additional benefit but exponentially increases the risk of severe irritation and barrier disruption.' }
+      { percentage: '15-20%', detail: 'The clinically proven optimal range for maximizing collagen production and pigment inhibition.' }
     ],
-    purgingBehavior: 'Vitamin C does not increase cellular turnover and should not cause purging. Breakouts from Vitamin C are typically caused by the heavy bases (like Vitamin E or Ferulic Acid) used to stabilize the formula, or oxidation of the product.',
+    purgingBehavior: 'Vitamin C does not increase cellular turnover and should not cause purging. Breakouts from Vitamin C are typically caused by the heavy bases (like Vitamin E) used to stabilize the formula, or oxidation of the product.',
     worksWith: ['Sunscreen', 'Vitamin E', 'Ferulic Acid', 'Hyaluronic Acid'],
     combinationsTable: [
       { combo: 'Vitamin C + Sunscreen', detail: 'The ultimate daytime duo. Vitamin C neutralizes the free radicals that bypass your SPF.' },
-      { combo: 'Vitamin C + Niacinamide', detail: 'Safe and synergistic for tackling complex hyperpigmentation from multiple pathways.' },
-      { combo: 'Vitamin C + Copper Peptides', detail: 'Avoid mixing simultaneously. Ascorbic acid can break down copper peptides, rendering both ineffective.' }
+      { combo: 'Vitamin C + Niacinamide', detail: 'Safe and synergistic for tackling complex hyperpigmentation from multiple pathways.' }
     ],
     citations: [
-      'Pullar JM, Carr AC, Vissers MCM. (2017). The Roles of Vitamin C in Skin Health. Nutrients.',
-      'Telang PS. (2013). Vitamin C in dermatology. Indian Dermatol Online J.'
+      '[Pullar JM et al. — The Roles of Vitamin C in Skin Health (2017)](https://pubmed.ncbi.nlm.nih.gov/28805671/)',
+      '[Telang PS. — Vitamin C in dermatology (2013)](https://pubmed.ncbi.nlm.nih.gov/23741676/)'
     ],
     concerns: ['Uneven Skin Tone', 'Dark Spots', 'Anti Aging', 'Dullness']
   },
@@ -143,8 +140,8 @@ const ingredientFacts = {
       { combo: 'PDRN + Retinol', detail: 'Excellent. PDRN mitigates the inflammatory response of retinoids while compounding the anti-aging benefits.' }
     ],
     citations: [
-      'Squadrito F, et al. (2017). Pharmacological Activity and Clinical Use of PDRN. Front Pharmacol.',
-      'Kim J, et al. (2020). Efficacy of polydeoxyribonucleotide in the treatment of facial aging. J Cosmet Dermatol.'
+      '[Squadrito F et al. — Pharmacological Activity and Clinical Use of PDRN (2017)](https://pubmed.ncbi.nlm.nih.gov/28496417/)',
+      '[Kim J et al. — Efficacy of polydeoxyribonucleotide in the treatment of facial aging (2020)](https://pubmed.ncbi.nlm.nih.gov/32083377/)'
     ],
     concerns: ['Skin Barrier Repair', 'Anti Aging', 'Scarring', 'Inflammation']
   },
@@ -164,10 +161,10 @@ const ingredientFacts = {
     worksWith: ['Ceramides', 'Hyaluronic Acid', 'Panthenol', 'Niacinamide'],
     combinationsTable: [
       { combo: 'Ectoin + Ceramides', detail: 'The gold standard for barrier repair. Ectoin protects the cells while ceramides rebuild the lipid matrix.' },
-      { combo: 'Ectoin + Strong Actives', detail: 'Excellent buffer. Applying Ectoin before Retinol or AHA drastically reduces the chance of chemical burns.' }
+      { combo: 'Ectoin + Strong Actives', detail: 'Excellent buffer. Applying Ectoin before Retinol or AHA reduces the chance of irritation.' }
     ],
     citations: [
-      'Bünger J, et al. (2001). Ectoin: an effective natural substance to prevent UVA-induced premature photoaging. Skin Pharmacol Appl Skin Physiol.'
+      '[Bünger J et al. — Ectoin: an effective natural substance to prevent UVA-induced premature photoaging (2001)](https://pubmed.ncbi.nlm.nih.gov/11406798/)'
     ],
     concerns: ['Skin Barrier Repair', 'Rosacea', 'Sensitive Skin', 'Dryness']
   },
@@ -190,7 +187,7 @@ const ingredientFacts = {
       { combo: 'Copper Peptides + Hyaluronic Acid', detail: 'Perfect combination for deep hydration and structural repair.' }
     ],
     citations: [
-      'Pickart L, Margolina A. (2018). Regenerative and Protective Actions of the GHK-Cu Peptide in the Light of the New Gene Data. Int J Mol Sci.'
+      '[Pickart L, Margolina A. — Regenerative and Protective Actions of the GHK-Cu Peptide (2018)](https://pubmed.ncbi.nlm.nih.gov/29986520/)'
     ],
     concerns: ['Anti Aging', 'Skin Barrier Repair', 'Texture', 'Firmness']
   }
@@ -209,7 +206,7 @@ const defaultIngredient = {
   worksWith: ['Moisturizer', 'Hyaluronic Acid'],
   combinationsTable: [],
   citations: [
-    'Dermatology research emphasizes the importance of consistency over at least one full epidermal turnover cycle.'
+    'Clinical studies generally evaluate skin changes over an 8-12 week period to measure true efficacy.'
   ],
   concerns: ['General Skincare']
 };
@@ -237,9 +234,6 @@ function generateDetailedContent(title, category) {
       break;
     }
   }
-  const kwList = [...seoKeywords[keywordCategory]].sort(() => 0.5 - Math.random());
-  const kw1 = kwList[0] || 'signs your skincare routine is working';
-  const kw2 = kwList[1] || 'why is my skincare routine not working';
 
   let markdown = `# ${title}\n\n`;
 
@@ -254,35 +248,34 @@ function generateDetailedContent(title, category) {
   }
 
   markdown += `## Factors That Affect Results\n\nThe timeline above is a clinical average, but your exact results will vary heavily based on several critical factors:\n\n`;
-  markdown += `1. **Concentration:** Higher percentages act faster but drastically increase the risk of barrier damage.\n`;
-  markdown += `2. **Formulation:** Delivery systems (like liposomal encapsulation) allow ingredients to penetrate deeper than cheap water-based serums.\n`;
-  markdown += `3. **Baseline Damage:** Severe hyperpigmentation or profound barrier degradation will require much longer treatment times.\n`;
-  markdown += `4. **Consistency:** Skincare requires metabolic cellular changes. Applying a product sporadically interrupts these biological processes.\n`;
-  markdown += `5. **Sun Protection:** UV radiation constantly degrades collagen and triggers melanin production, directly fighting against your treatments.\n\n`;
+  markdown += `1. **Concentration:** Higher percentages are not necessarily better, and can sometimes increase irritation.\n`;
+  markdown += `2. **Formulation:** Delivery systems allow ingredients to penetrate deeper than basic water-based serums.\n`;
+  markdown += `3. **Baseline Damage:** Severe hyperpigmentation or profound barrier degradation will require longer treatment times.\n`;
+  markdown += `4. **Consistency:** Most clinical studies evaluate regular use over several weeks, so inconsistent application makes it harder to judge whether a product is working.\n`;
+  markdown += `5. **Sun Protection:** UV radiation constantly degrades collagen and triggers melanin production, which works against your treatments.\n\n`;
 
   if (fact.concerns && fact.concerns.length > 0) {
-    markdown += `## Expected Timelines by Concern\n\n`;
     fact.concerns.forEach(concern => {
-      markdown += `### How long for ${concern.toLowerCase()}?\nWhen specifically treating ${concern.toLowerCase()}, the biological pathway dictates the speed. Surface-level concerns (like hydration or oil control) alter quickly. However, structural issues like ${concern.toLowerCase()} require the skin to synthesize new proteins or physically expel deeply embedded pigment, which fundamentally requires weeks to months.\n\n`;
+      markdown += `## How Long Does ${ingredientName} Take to Work for ${concern}?\nWhen specifically treating ${concern.toLowerCase()}, the biological pathway dictates the speed. Skin renewal is a gradual process, but there isn't one fixed 28-day cycle that determines when every skincare ingredient will work. Clinical studies measure different outcomes over different time periods.\n\n`;
     });
   }
 
   if (fact.concentrations && fact.concentrations.length > 0) {
-    markdown += `## Does Concentration Matter?\n\nYes, absolutely. But more is not always better.\n\n`;
+    markdown += `## Does ${ingredientName} Concentration Matter?\n\nYes, absolutely. But more is not always better.\n\n`;
     fact.concentrations.forEach(conc => {
       markdown += `- **${conc.percentage}**: ${conc.detail}\n`;
     });
     markdown += `\n`;
   }
 
-  markdown += `## How to Know It Is Working\n\nIf you are searching for *"${kw1}"*, look for subtle signs before major structural changes occur. In the first few weeks, you should notice an overall improvement in skin texture and hydration. The skin will feel less tight, and makeup may apply more smoothly. Deep hyperpigmentation and wrinkles will not change in the first month—you must rely on these subtle textural cues to prove the formulation is penetrating.\n\n`;
+  markdown += `## How Do You Know ${ingredientName} Is Working?\n\nHow do you actually know whether your skincare is working? Before major structural changes occur, look for subtle signs. \n\nA practical measurement protocol is essential:\n- **Day 0:** Document your baseline.\n- **Week 2:** Check for changes in hydration, tightness, or initial irritation.\n- **Week 4:** Look for early textural improvements or slight fading of fresh marks.\n- **Week 8:** Assess consistent changes in oiliness, redness, and pigmentation.\n- **Week 12:** Evaluate structural changes like fine lines or deep hyperpigmentation.\n\nTrack these specific signals: oiliness, redness, texture, pigmentation, breakouts.\n\n`;
 
-  markdown += `## Why It Might Not Be Working\n\nIf you are asking *"${kw2}"*, consider the following:\n- **Barrier Damage:** If your skin is red, stinging, or peeling, the ingredient cannot work effectively because all cellular energy is diverted to fighting inflammation.\n- **Chemical Clashes:** You may be applying it alongside an ingredient that alters its pH or degrades its molecular structure.\n- **Impatience:** You may simply not have given it enough time to complete a full cellular cycle.\n\n`;
+  markdown += `## Why Isn't My ${ingredientName} Working?\n\nIf you are not seeing results, consider the following:\n- **Barrier Damage:** A compromised skin barrier can increase irritation and make it harder to tolerate active ingredients, so restoring comfort and barrier function may be a sensible priority before adding more actives.\n- **Routine Complexity:** Using several new active ingredients at once can make it difficult to determine which product is helping or irritating your skin.\n- **Impatience:** You may simply not have given it enough time.\n\n`;
 
-  markdown += `## The Truth About Purging\n\n**Can this cause purging?**\n\n${fact.purgingBehavior}\n\n`;
+  markdown += `## Can ${ingredientName} Cause Purging?\n\n${fact.purgingBehavior}\n\n`;
 
   if (fact.combinationsTable && fact.combinationsTable.length > 0) {
-    markdown += `## Ingredient Combinations\n\nHow does this mix with other popular actives?\n\n| Combination | Analysis |\n|---|---|\n`;
+    markdown += `## Can You Use ${ingredientName} With Other Ingredients?\n\nHow does this mix with other popular actives?\n\n| Combination | Analysis |\n|---|---|\n`;
     fact.combinationsTable.forEach(row => {
       markdown += `| **${row.combo}** | ${row.detail} |\n`;
     });
@@ -290,28 +283,18 @@ function generateDetailedContent(title, category) {
   }
 
   markdown += `## Frequently Asked Questions\n\n`;
-  markdown += `### When should I stop using it?\nIf you experience severe redness, burning, peeling, or breakouts in areas where you never normally break out, stop immediately. This is not a purge; it is contact dermatitis. Prioritize barrier repair for at least two weeks before introducing any actives again.\n\n`;
+  markdown += `### When should I stop using it?\nIf you experience severe redness, burning, peeling, or breakouts in areas where you never normally break out, stop immediately. Prioritize barrier repair before introducing any actives again.\n\n`;
   
-  markdown += `### Do I need to use it every day?\nIt depends on the active and your skin tolerance. Potent actives should be introduced slowly (2-3 times a week). Hydrators and barrier-repair ingredients (like ceramides or ectoin) should be used twice daily.\n\n`;
+  markdown += `### Do I need to use it every day?\n${ingredientName} is generally suitable for regular use, but the ideal frequency depends on the product formulation and your skin's tolerance. Follow the product directions and reduce frequency if irritation develops.\n\n`;
 
-  markdown += `## Stop Guessing. Start Tracking.\n\nThe human brain is terrible at remembering subtle changes in skin texture or pigmentation over a 12-week period. At Fasade, we built a clinical-grade tracking tool to objectively measure your progress over time. Stop wasting money on products you aren't sure are working. Track your routine and achieve real results.\n\n`;
+  markdown += `## How to Track Your Progress\n\nThe human brain is terrible at remembering subtle changes in skin texture or pigmentation over a 12-week period. Same lighting, same camera distance, same angle, same skin state.\n\nFasade lets you track these changes over time. Stop wasting money on products you aren't sure are working. Track your routine and achieve real results.\n\n`;
 
   if (fact.citations && fact.citations.length > 0) {
     markdown += `## Clinical Sources\n\n`;
     fact.citations.forEach(cite => {
-      markdown += `- *${cite}*\n`;
+      markdown += `- ${cite}\n`;
     });
   }
-
-  // To hit 1400 words, we pad with extensive generalized clinical advice regarding the category
-  if (category === 'Microbiome & Barrier' || category === 'Longevity & Biotech') {
-    markdown += `\n\n## The Future of Regenerative Skincare\n\nAs we move into 2026 and beyond, dermatology is shifting away from aggressive exfoliation and toward regenerative biology. We now understand that forcing the skin to constantly repair chemical burns (from over-exfoliation) leads to chronic inflammation, which accelerates aging.\n\nThe future lies in ingredients that communicate with our cells—instructing them to behave younger, repair their own DNA, and maintain a robust, diverse microbiome. This is why ingredients like PDRN, Exosomes, and advanced peptides are replacing harsh acids in high-end clinics globally.\n`;
-  } else {
-    markdown += `\n\n## The Importance of Epidermal Barrier Health\n\nRegardless of the active ingredient you choose, its efficacy is fundamentally limited by the health of your stratum corneum (your skin barrier). A damaged barrier suffers from high Transepidermal Water Loss (TEWL), meaning it cannot hold onto moisture. More importantly, a damaged barrier allows irritants to penetrate deeply, causing a constant state of low-grade inflammation.\n\nWhen the skin is inflamed, it halts collagen production and upregulates melanin production (causing post-inflammatory hyperpigmentation). Therefore, attempting to treat wrinkles or dark spots while your barrier is compromised is biologically impossible. Always repair the barrier first.\n`;
-  }
-
-  // Ensure it's very long
-  markdown += `\n\n## Final Protocol Recommendations\nTo maximize the clinical efficacy of this treatment protocol, ensure you are utilizing a gentle, non-stripping cleanser. Avoid cleansers that leave the skin feeling tight or "squeaky clean," as this indicates a severe disruption of the acid mantle. Follow with your active treatment applied to dry skin (to slow penetration and reduce irritation), and lock it in with a ceramide-dominant moisturizer. Finally, absolute adherence to a broad-spectrum SPF 30+ protocol every single morning is mandatory for any of these cellular changes to become permanent.\n`;
 
   return markdown;
 }
