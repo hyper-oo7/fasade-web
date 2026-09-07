@@ -130,9 +130,66 @@ const getFact = (title) => {
   return defaultFact;
 };
 
+const seoKeywords = {
+  'Niacinamide': [
+    'how long does niacinamide take to work on acne', 'how long does niacinamide take to fade dark spots', 'how long does niacinamide take to control oil', 'when does niacinamide start working', 'when will I see results from niacinamide', 'niacinamide results after 2 weeks', 'niacinamide results after 4 weeks', 'niacinamide results after 8 weeks', 'can niacinamide make skin dry', 'can niacinamide cause breakouts', 'can niacinamide reduce pore appearance', 'niacinamide for uneven skin texture', 'niacinamide for post acne marks', 'niacinamide for redness and sensitive skin', 'best time to use niacinamide'
+  ],
+  'Retinol': [
+    'how long does retinol take to work on acne', 'how long does retinol take to work on wrinkles', 'how long does retinol take to fade dark spots', 'when do retinol results start', 'retinol results after 4 weeks', 'retinol results after 8 weeks', 'retinol results after 12 weeks', 'why is my retinol not working', 'why is retinol making my skin worse', 'is retinol supposed to make skin peel', 'how long does retinol purging last', 'retinol for beginners sensitive skin', 'how often should beginners use retinol', 'retinol before or after moisturizer', 'how to know if retinol is working'
+  ],
+  'Vitamin C': [
+    'how long does vitamin c take to work on dark spots', 'when does vitamin c start working', 'vitamin c results after 4 weeks', 'vitamin c results after 8 weeks', 'why is vitamin c not working', 'can vitamin c cause breakouts', 'vitamin c for post acne marks', 'vitamin c for uneven skin tone', 'vitamin c for sensitive skin', 'vitamin c morning or night', 'vitamin c before or after niacinamide', 'vitamin c before or after moisturizer', 'how long does vitamin c take to fade pigmentation', 'can vitamin c improve skin texture', 'signs vitamin c serum is working'
+  ],
+  'Hyaluronic Acid': [
+    'how long does hyaluronic acid take to work', 'when does hyaluronic acid start working', 'hyaluronic acid results after one week', 'hyaluronic acid for dehydrated skin', 'hyaluronic acid for dry sensitive skin', 'can hyaluronic acid cause dryness', 'why is hyaluronic acid not hydrating my skin', 'hyaluronic acid before or after moisturizer', 'can you use hyaluronic acid every day', 'hyaluronic acid morning or night', 'hyaluronic acid on damp or dry skin', 'hyaluronic acid with retinol', 'hyaluronic acid with niacinamide', 'signs your skin needs hyaluronic acid', 'hyaluronic acid for damaged skin barrier'
+  ],
+  'Salicylic Acid': [
+    'how long does salicylic acid take to work', 'how long does salicylic acid take to clear acne', 'salicylic acid results after 2 weeks', 'salicylic acid results after 4 weeks', 'why is salicylic acid not working', 'can salicylic acid cause purging', 'how long does salicylic acid purging last', 'salicylic acid for clogged pores', 'salicylic acid for blackheads', 'salicylic acid for oily sensitive skin', 'salicylic acid before or after niacinamide', 'salicylic acid with retinol', 'salicylic acid with hyaluronic acid', 'how often should I use salicylic acid', 'signs salicylic acid is working'
+  ],
+  'Azelaic Acid': [
+    'how long does azelaic acid take to work', 'azelaic acid results after 4 weeks', 'azelaic acid results after 8 weeks', 'azelaic acid for post acne marks', 'azelaic acid for uneven skin tone', 'azelaic acid for sensitive skin', 'why is azelaic acid not working', 'can azelaic acid cause purging', 'azelaic acid before or after niacinamide', 'azelaic acid with retinol', 'azelaic acid with vitamin c', 'azelaic acid for redness', 'azelaic acid for acne scars', 'azelaic acid for hyperpigmentation', 'signs azelaic acid is working'
+  ],
+  'Peptides': [
+    'what do peptides do for skin', 'how long do peptides take to work', 'when do peptide serum results appear', 'peptides for skin barrier repair', 'peptides for sensitive skin', 'copper peptides vs regular peptides', 'copper peptides vs retinol', 'copper peptides with retinol', 'copper peptides with vitamin c', 'copper peptides for skin texture', 'copper peptides for fine lines', 'copper peptides for damaged skin', 'how long do copper peptides take to work', 'are copper peptides good for sensitive skin', 'how to use copper peptides in skincare'
+  ],
+  'Skin Barrier': [
+    'how long does a damaged skin barrier take to heal', 'how to know if your skin barrier is damaged', 'signs of a damaged skin barrier', 'skin barrier damage from over exfoliation', 'how to repair skin barrier from retinol', 'how to repair skin barrier from acids', 'skincare routine for damaged skin barrier', 'best ingredients for damaged skin barrier', 'niacinamide for damaged skin barrier', 'ceramides for damaged skin barrier', 'hyaluronic acid for damaged skin barrier', 'can retinol damage skin barrier', 'can salicylic acid damage skin barrier', 'why does my skin sting after skincare', 'why does moisturizer burn my skin'
+  ],
+  'Skincare': [
+    'how to tell if skincare is working', 'how to know if skincare products are working', 'how long should you try skincare before changing it', 'how long should you wait before changing skincare products', 'how long does a skincare routine take to work', 'signs your skincare routine is working', 'signs your skincare routine is not working', 'why is my skincare routine not working', 'why does my skin look worse after starting skincare', 'why am I breaking out after changing skincare', 'how long does it take skin to adjust to new skincare', 'how many weeks to see skincare results', 'how long should I give a skincare product', 'when should I stop using a skincare product', 'how to track skincare results'
+  ]
+};
+
 // Generate highly detailed SEO content
 function generateContent(title, category) {
   const fact = getFact(title);
+  
+  // Find which keyword category fits best
+  let keywordCategory = 'Skincare';
+  for (const key of Object.keys(seoKeywords)) {
+    if (title.includes(key) || title.toLowerCase().includes(key.toLowerCase())) {
+      keywordCategory = key;
+      break;
+    }
+  }
+  
+  // If it's a specific combination like Niacinamide + Retinol
+  let combos = [];
+  if (title.toLowerCase().includes('niacinamide') && title.toLowerCase().includes('retinol')) {
+    combos = ['niacinamide and retinol routine for beginners', 'niacinamide or retinol first', 'niacinamide before or after retinol', 'how long to wait between niacinamide and retinol', 'niacinamide and retinol morning or night'];
+  } else if (title.toLowerCase().includes('niacinamide') && title.toLowerCase().includes('vitamin c')) {
+    combos = ['niacinamide and vitamin c routine', 'niacinamide or vitamin c first'];
+  }
+
+  // Pick random keywords to inject naturally
+  const kwList = [...seoKeywords[keywordCategory], ...combos].sort(() => 0.5 - Math.random());
+  
+  const kw1 = kwList[0] || 'how to track skincare results';
+  const kw2 = kwList[1] || 'signs your skincare routine is working';
+  const kw3 = kwList[2] || 'how long should you wait before changing skincare products';
+  const kw4 = kwList[3] || 'why is my skincare routine not working';
+  const kw5 = kwList[4] || 'how many weeks to see skincare results';
+
   const primaryIngredient = Object.keys(ingredientFacts).find(ing => title.includes(ing)) || title.split(' ')[0];
   
   let markdown = `
@@ -141,14 +198,16 @@ If you are wondering about **${title.toLowerCase()}**, you are not alone. Dermat
 
 ${fact.details}
 
+If you've ever asked yourself *"${kw1}?"*, the answer lies in your biological cell turnover.
+
 ## The Biological Timeline
-When you apply this to your skin, it doesn't work overnight. Skincare is a marathon, not a sprint. The skin operates on a 28-day cellular turnover cycle (which slows down as we age). This means any product you use needs at least one full cycle to show true results at the cellular level.
+When you apply this to your skin, it doesn't work overnight. Skincare is a marathon, not a sprint. The skin operates on a 28-day cellular turnover cycle (which slows down as we age). This means any product you use needs at least one full cycle to show true results at the cellular level. This perfectly answers the common question: **${kw5}**.
 
 ### Phase 1: The Initial Reaction (Days 1-7)
 During the first week, you might experience immediate hydration or a slight "purge" if you are using an active ingredient that accelerates cell turnover. Don't panic—this means the active is penetrating the stratum corneum. Focus entirely on hydration and barrier support during this window.
 
 ### Phase 2: The Cellular Shift (Weeks 4-6)
-By week four, you've completed one full cellular cycle. This is where the magic happens. You should start seeing a visible reduction in your primary concerns, whether that is texture, acne, or dullness. The micro-inflammation should subside.
+By week four, you've completed one full cellular cycle. This is where the magic happens. You should start seeing a visible reduction in your primary concerns, whether that is texture, acne, or dullness. The micro-inflammation should subside. This is generally the definitive answer for **${kw2}**.
 
 ### Phase 3: The Long-Term Results (Months 3-6)
 Structural changes like collagen production or deep hyperpigmentation fading take significant time. If you use it consistently for 3 to 6 months, you will see the peak clinical efficacy of the product. This is when dermal remodeling occurs.
@@ -163,10 +222,10 @@ When choosing between ingredients for your specific concern, making the right ch
 ### The Verdict
 You don't always have to choose. In some advanced routines, they can be complementary. However, if your skin is sensitive, always start with the gentler option and track your skin's response daily to avoid barrier degradation.
 `;
-  } else if (category === 'Combinations') {
+  } else if (category === 'Combinations' || combos.length > 0) {
     markdown += `
 ## The Golden Rule of Mixing
-Mixing actives can either create a powerhouse routine or lead to a compromised skin barrier. 
+Mixing actives can either create a powerhouse routine or lead to a compromised skin barrier. If you are specifically searching for **${kw3}**, you need to understand the chemical interactions.
 
 ### Can they be mixed?
 Based on clinical chemistry, ${fact.clashes.length > 0 ? `you should be extremely careful mixing this. It famously clashes with **${fact.clashes.join(', ')}**. Mixing these can alter the pH, rendering both useless or causing severe contact dermatitis.` : `yes, this is generally considered a safe and synergistic combination. They work on complementary biological pathways.`}
@@ -186,14 +245,14 @@ Based on clinical chemistry, ${fact.clashes.length > 0 ? `you should be extremel
 
 ## Frequently Asked Questions (FAQ)
 
-### 1. How often should I use this?
-For optimal results, start 2-3 times a week. If your skin tolerates it without redness or stinging, you can gradually increase to daily use. Always listen to your skin barrier.
+### 1. ${kw1.charAt(0).toUpperCase() + kw1.slice(1)}?
+For optimal results, start 2-3 times a week. If your skin tolerates it without redness or stinging, you can gradually increase to daily use. Always listen to your skin barrier, as this deeply influences how effectively the ingredient works.
 
-### 2. Can I mix it with other ingredients?
+### 2. ${kw4.charAt(0).toUpperCase() + kw4.slice(1)}?
+There are two main reasons: lack of consistency, or a compromised skin barrier. If you are experiencing purging (small whiteheads in areas you normally break out), this is normal and lasts 2-4 weeks. However, if you are experiencing redness, burning, or breakouts in completely new areas, this is irritation. Stop immediately and focus on barrier repair.
+
+### 3. Can I mix it with other ingredients?
 You can safely mix this with **${fact.worksWith.join(', ')}**. These ingredients are highly complementary and often boost the overall efficacy.
-
-### 3. Why is my skin getting worse?
-If you are experiencing purging (small whiteheads in areas you normally break out), this is normal and lasts 2-4 weeks. However, if you are experiencing redness, burning, or breakouts in completely new areas, this is irritation. Stop immediately and focus on barrier repair.
 
 ### How to Track Your Progress
 Stop guessing if it's working. The only way to truly know is to track it visually. The mirror lies, but data doesn't. At Fasade, we built the ultimate tool to measure exactly how your skin is responding over these critical phases. Track your routine, log your barrier health, and finally achieve the results you deserve.
@@ -283,12 +342,13 @@ async function generateAll() {
       }
 
       const slug = toSlug(title);
-      const excerpt = `Discover the clinical truth about ${title}. Learn the biological timeline, common mistakes to avoid, and how to track your real results.`;
       
       // Calculate realistic read time based on text length
       const content = generateContent(title, category);
       const wordCount = content.split(' ').length;
       const readTime = Math.max(3, Math.ceil(wordCount / 200));
+
+      const excerpt = `Discover the clinical truth about ${title}. Find answers to questions like "${title.includes('Retinol') ? 'how long does retinol take to work on wrinkles' : 'how to track skincare results'}" and learn how to maximize your routine.`;
 
       blogs.push({
         title,
