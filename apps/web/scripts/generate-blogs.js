@@ -246,51 +246,42 @@ function toSlug(title) {
   return title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
 }
 
+async function fetchBestImage(query) {
+  try {
+    const res = await fetch(`https://api.unsplash.com/search/photos?query=${encodeURIComponent(query)}&per_page=1&client_id=${UNSPLASH_KEY}&orientation=landscape`);
+    if (res.ok) {
+      const data = await res.json();
+      if (data.results && data.results.length > 0) {
+        return data.results[0].urls.regular;
+      }
+    }
+    return null;
+  } catch (e) {
+    return null;
+  }
+}
+
 async function generateAll() {
   const blogs = [];
-  console.log("Fetching 120 images from Unsplash to ensure unique thumbnails...");
-  
-  let imagePool = [];
-  const queries = ['skincare', 'serum', 'cream', 'face'];
-  
-  for (const query of queries) {
-    try {
-      const res = await fetch(`https://api.unsplash.com/search/photos?query=${query}&per_page=30&client_id=${UNSPLASH_KEY}&orientation=landscape`);
-      if (res.ok) {
-        const data = await res.json();
-        imagePool.push(...data.results.map(img => img.urls.regular));
-      }
-    } catch (e) {
-      console.log("Unsplash fetch failed for query", query);
-    }
-  }
+  console.log("Generating 100 SEO-optimized, highly detailed blog posts with targeted thumbnails...");
 
-  // Deduplicate and fallback
-  imagePool = [...new Set(imagePool)];
   const fallbacks = [
     'https://images.unsplash.com/photo-1556228578-0d85b1a4d571?q=80&w=1200',
     'https://images.unsplash.com/photo-1617897903246-719242758050?q=80&w=1200',
-    'https://images.unsplash.com/photo-1599733594230-6b823276abcc?q=80&w=1200',
-    'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=1200',
-    'https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?q=80&w=1200',
-    'https://images.unsplash.com/photo-1615397323863-12d7088b7da8?q=80&w=1200',
-    'https://images.unsplash.com/photo-1629198688000-71f23e745b6e?q=80&w=1200',
-    'https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=1200'
+    'https://images.unsplash.com/photo-1599733594230-6b823276abcc?q=80&w=1200'
   ];
-
-  while (imagePool.length < 100) {
-    imagePool.push(...fallbacks);
-  }
-  
-  // Shuffle pool to ensure randomness
-  imagePool.sort(() => Math.random() - 0.5);
-
-  console.log(`Successfully loaded ${imagePool.length} images.`);
-  console.log("Generating 100 SEO-optimized, highly detailed blog posts...");
 
   for (const [category, titles] of Object.entries(clusters)) {
     for (const title of titles) {
-      const coverImage = imagePool.pop();
+      // Create a highly specific search query for the best possible image
+      let searchQuery = title.replace(/How Long Does|Take to Work\?|Why Is My|Not Working\?|for|vs/gi, '').trim();
+      if (!searchQuery || searchQuery.length < 3) searchQuery = 'skincare routine';
+      
+      let coverImage = await fetchBestImage(searchQuery);
+      if (!coverImage) {
+        coverImage = fallbacks[Math.floor(Math.random() * fallbacks.length)];
+      }
+
       const slug = toSlug(title);
       const excerpt = `Discover the clinical truth about ${title}. Learn the biological timeline, common mistakes to avoid, and how to track your real results.`;
       
@@ -309,7 +300,7 @@ async function generateAll() {
         readTime,
         lastUpdated: new Date().toISOString()
       });
-      console.log(`Generated: ${title}`);
+      console.log(`Generated: ${title} (Image: ${searchQuery})`);
     }
   }
 
