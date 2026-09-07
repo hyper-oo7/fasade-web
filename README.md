@@ -1,9 +1,19 @@
-# Fasade
+# Fasade Monorepo
 
-Women-exclusive skincare ritual app built with **Expo (React Native)** and **Supabase**.
+Welcome to the Fasade codebase. This monorepo contains both the women-exclusive skincare ritual mobile app and the SEO-driven web application.
 
-## Features
+## Web Application (Next.js)
 
+The web frontend (`apps/web`) hosts the Fasade landing page and the programmatic SEO knowledge base containing 149 medically accurate skincare guides.
+
+- **Framework**: Next.js (App Router)
+- **Deployment**: Vercel
+- **Styling**: Tailwind CSS
+- **Package Manager**: npm (workspaces)
+
+## Mobile Application (Expo & Supabase)
+
+The core product is built with **Expo (React Native)** and **Supabase**.
 - Daily face photo ritual with AI scorecard (5 factors: Clarity, Symmetry, Hydration, Tone, Texture)
 - Personalized product guidance and insights
 - **Arena** social feed with Elevate (likes) and Remarks (comments)
@@ -11,18 +21,6 @@ Women-exclusive skincare ritual app built with **Expo (React Native)** and **Sup
 - **Vanity** profile, metrics, vanity grid, badges
 - **Atelier** curated ritual content
 - Women-only onboarding gate with community attestation
-
-## Project structure
-
-# Fasade Monorepo
-
-Welcome to the Fasade codebase.
-
-## Tech Stack
-- **Framework**: Next.js (App Router)
-- **Deployment**: Vercel
-- **Styling**: Tailwind CSS
-- **Package Manager**: npm (workspaces)
 
 ## Local Development
 To run the web application locally:
