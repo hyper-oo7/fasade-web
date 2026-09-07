@@ -1,3 +1,4 @@
+"use client";
 import { motion } from 'framer-motion'
 import { ArrowRight, TrendingUp, Droplets, Sun, CircleDot } from 'lucide-react'
 import { SectionWrapper, SectionHeader } from '../layout/SectionWrapper'
@@ -226,3 +227,4 @@ export function BeforeAfterShowcase() {
     </SectionWrapper>
   )
 }
+

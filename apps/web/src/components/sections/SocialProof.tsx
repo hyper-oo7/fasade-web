@@ -1,3 +1,4 @@
+"use client";
 import { Users, Heart } from 'lucide-react'
 import { SectionWrapper } from '../layout/SectionWrapper'
 import { FadeIn } from '../ui/FadeIn'
@@ -54,3 +55,4 @@ export function SocialProof() {
     </SectionWrapper>
   )
 }
+

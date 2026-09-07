@@ -1,3 +1,4 @@
+"use client";
 import { motion } from 'framer-motion'
 import {
   TrendingUp,
@@ -98,3 +99,4 @@ export function DashboardMockup() {
     </motion.div>
   )
 }
+

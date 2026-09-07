@@ -1,3 +1,4 @@
+"use client";
 import { useScrollToSection } from '../../hooks/useScrollToSection'
 
 export function Footer() {
@@ -39,3 +40,4 @@ export function Footer() {
     </footer>
   )
 }
+

@@ -1,3 +1,4 @@
+"use client";
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronDown } from 'lucide-react'
@@ -42,8 +43,25 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
 }
 
 export function FAQ() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqItems.map(item => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.answer
+      }
+    }))
+  };
+
   return (
     <SectionWrapper id="faq" background="white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <SectionHeader
         eyebrow="FAQ"
         title="Questions? We've got answers."
@@ -60,3 +78,4 @@ export function FAQ() {
     </SectionWrapper>
   )
 }
+

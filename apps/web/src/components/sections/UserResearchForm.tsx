@@ -1,3 +1,4 @@
+"use client";
 import { useState, type FormEvent } from 'react'
 import { CheckCircle2, Send } from 'lucide-react'
 import { SectionWrapper, SectionHeader } from '../layout/SectionWrapper'
@@ -263,3 +264,4 @@ export function UserResearchForm() {
     </SectionWrapper>
   )
 }
+

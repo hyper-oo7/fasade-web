@@ -1,3 +1,4 @@
+"use client";
 import { useState, type FormEvent } from 'react'
 import { CheckCircle2, Loader2 } from 'lucide-react'
 import { Button } from './Button'
@@ -109,3 +110,4 @@ export function WaitlistForm({ source, inputId, variant = 'section' }: WaitlistF
     </form>
   )
 }
+
