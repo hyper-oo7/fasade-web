@@ -64,6 +64,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Force Vercel rebuild
   return (
     <html lang="en" className={`${inter.variable} ${cormorant.variable}`}>
       <head>
