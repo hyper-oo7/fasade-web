@@ -1,4 +1,5 @@
 "use client";
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { ArrowRight, TrendingUp, Droplets, Sun, CircleDot } from 'lucide-react'
 import { SectionWrapper, SectionHeader } from '../layout/SectionWrapper'
@@ -60,15 +61,17 @@ function ComparisonCard({
 
       <div className="p-5">
 
-      <div className="relative mb-4 overflow-hidden rounded-2xl">
-        <img
+      <div className="relative mb-4 overflow-hidden rounded-2xl h-[600px] w-full">
+        <Image
           src={variant === 'before' ? '/before-face.png' : '/after-face.png'}
           alt={variant === 'before' ? 'Before' : 'After'}
-         className="block h-[600px] w-full object-cover object-center"
+          fill
+          sizes="(max-width: 1024px) 100vw, 50vw"
+          className="object-cover object-center"
         />
 
        <div
-         className={`absolute left-3 top-3 rounded-full px-3 py-1 text-xs font-bold text-white ${
+         className={`absolute left-3 top-3 rounded-full px-3 py-1 text-xs font-bold text-white z-10 ${
            variant === 'before'
              ? 'bg-red-500'
              : 'bg-emerald-500'

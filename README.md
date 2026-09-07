@@ -14,22 +14,25 @@ Women-exclusive skincare ritual app built with **Expo (React Native)** and **Sup
 
 ## Project structure
 
-```
-fasade/
-  apps/mobile/     Expo app
-  apps/web/        Landing page (React + Vite)
-  supabase/        Migrations, edge functions, seed
-```
+# Fasade Monorepo
 
-## Landing page (Waitlist)
+Welcome to the Fasade codebase.
 
+## Tech Stack
+- **Framework**: Next.js (App Router)
+- **Deployment**: Vercel
+- **Styling**: Tailwind CSS
+- **Package Manager**: npm (workspaces)
+
+## Local Development
+To run the web application locally:
 ```bash
 cd apps/web
 npm install
 npm run dev
 ```
 
-Open http://localhost:5173 to preview the Fasade waitlist landing page.
+The application will be available at `http://localhost:3000`.
 
 Survey responses and waitlist emails are saved to **Supabase** when env vars are set. See `apps/web/DEPLOY.md` for full deployment steps (GitHub, Vercel, custom domain).
 

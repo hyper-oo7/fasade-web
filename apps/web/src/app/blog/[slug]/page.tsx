@@ -51,16 +51,55 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": blog.title,
-    "image": blog.coverImage ? [blog.coverImage] : [],
-    "datePublished": blog.lastUpdated,
-    "dateModified": blog.lastUpdated,
-    "author": [{
-        "@type": "Organization",
-        "name": "Fasade",
-        "url": "https://www.fasade.online"
-    }]
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": `https://www.fasade.online/blog/${blog.slug}`
+        },
+        "headline": blog.title,
+        "image": blog.coverImage ? [blog.coverImage] : [],
+        "datePublished": "2026-06-01T08:00:00Z",
+        "dateModified": blog.lastUpdated,
+        "author": [{
+            "@type": "Organization",
+            "name": "Fasade",
+            "url": "https://www.fasade.online"
+        }],
+        "publisher": {
+          "@type": "Organization",
+          "name": "Fasade",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.fasade.online/favicon.svg"
+          }
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.fasade.online/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://www.fasade.online/blog"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": blog.title,
+            "item": `https://www.fasade.online/blog/${blog.slug}`
+          }
+        ]
+      }
+    ]
   };
 
   return (

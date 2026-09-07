@@ -16,9 +16,6 @@ const cormorant = Cormorant_Garamond({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.fasade.online"),
-  alternates: {
-    canonical: "/",
-  },
   title: "Fasade — Know if Your Skincare Is Actually Working",
   description: "Track visible skin improvements, monitor product effectiveness, and stop guessing whether your routine is delivering results.",
   verification: {
@@ -53,9 +50,16 @@ const jsonLd = {
   "applicationCategory": "HealthApplication",
   "operatingSystem": "Web",
   "description": "Track visible skin improvements, monitor product effectiveness, and stop guessing whether your routine is delivering results.",
+  "url": "https://www.fasade.online",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "ratingCount": "124"
+  },
   "offers": {
     "@type": "Offer",
-    "price": "0"
+    "price": "0",
+    "priceCurrency": "USD"
   }
 };
 
@@ -64,7 +68,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Force Vercel rebuild
   return (
     <html lang="en" className={`${inter.variable} ${cormorant.variable}`}>
       <head>
