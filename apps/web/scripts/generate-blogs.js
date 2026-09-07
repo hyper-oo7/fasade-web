@@ -112,6 +112,69 @@ const ingredientFacts = {
     worksWith: ['Everything'],
     clashes: [],
     details: 'Lipids (fats) that are found naturally in high concentrations in the uppermost layers of skin, crucial for a healthy barrier. Without the proper ratio of ceramides, cholesterol, and fatty acids, the skin experiences transepidermal water loss (TEWL).'
+  },
+  'PDRN': {
+    time: '2-4 weeks for wound healing, 6-12 weeks for cellular regeneration and elasticity.',
+    concerns: ['Anti Aging', 'Skin Barrier Repair', 'Scarring', 'Inflammation'],
+    worksWith: ['Hyaluronic Acid', 'Peptides', 'Niacinamide', 'Ceramides'],
+    clashes: ['Strong Acids (AHA/BHA, if applied immediately before)'],
+    details: 'PDRN (Polydeoxyribonucleotide) and polynucleotides are fragments of DNA typically derived from salmon sperm. They act as biostimulators, activating the adenosine A2A receptor to stimulate tissue repair, reduce inflammation, and enhance the synthesis of collagen and elastin. While previously confined to clinical injectables (like Rejuran), topical PDRN is becoming a cornerstone of regenerative skincare.'
+  },
+  'Polynucleotides': {
+    time: '2-4 weeks for barrier health, 6-12 weeks for structural tissue regeneration.',
+    concerns: ['Anti Aging', 'Skin Barrier Repair', 'Texture'],
+    worksWith: ['Hyaluronic Acid', 'PDRN', 'Peptides'],
+    clashes: [],
+    details: 'Often used interchangeably with PDRN, polynucleotides are long chains of nucleotides that create an ideal environment for fibroblast proliferation. They fundamentally remodel the skin matrix rather than just treating superficial symptoms, making them highly sought after in 2026 clinics.'
+  },
+  'Ectoin': {
+    time: 'Immediate hydration, 1-2 weeks for profound barrier repair and redness reduction.',
+    concerns: ['Sensitive Skin', 'Skin Barrier Repair', 'Rosacea', 'Dry Skin'],
+    worksWith: ['Ceramides', 'Hyaluronic Acid', 'Niacinamide', 'Retinol (as a buffer)'],
+    clashes: [],
+    details: 'Ectoin is an extremolyte—a stress-protection molecule produced by microorganisms living in extremely harsh environments (like salt lakes). When applied to skin, it binds to water to form a protective hydro-complex shell around cells, shielding them from UV, pollution, and chemical stress while preventing transepidermal water loss.'
+  },
+  'Copper Peptides': {
+    time: '4-8 weeks for visible firmness, 12+ weeks for significant collagen remodeling.',
+    concerns: ['Anti Aging', 'Skin Barrier Repair', 'Texture'],
+    worksWith: ['Hyaluronic Acid', 'Ceramides', 'Niacinamide'],
+    clashes: ['Vitamin C (L-Ascorbic Acid)', 'Direct Acids (AHA/BHA)', 'Retinol (in same routine)'],
+    details: 'Copper tripeptide-1 (GHK-Cu) is a carrier peptide that delivers essential copper directly into cells. It is clinically proven to promote wound healing and stimulate the production of collagen and elastin, often acting as a non-irritating, reparative alternative to strong retinoids.'
+  },
+  'Exosomes': {
+    time: '2-4 weeks for visible rejuvenation and accelerated healing.',
+    concerns: ['Anti Aging', 'Skin Barrier Repair', 'Scarring'],
+    worksWith: ['Hyaluronic Acid', 'Peptides'],
+    clashes: ['Strong Acids (can degrade the vesicles)'],
+    details: 'Exosomes are nanoscale extracellular vesicles that carry molecular signals (like mRNA and growth factors) between cells. In skincare, they are the ultimate cellular messengers, instructing old or damaged skin cells to regenerate and repair themselves. Note that topical cosmetic exosomes are usually plant or bovine derived due to regulatory restrictions on human-derived material.'
+  },
+  'NAD+': {
+    time: '8-12 weeks for cellular longevity and firmness.',
+    concerns: ['Anti Aging', 'Cellular Health'],
+    worksWith: ['Peptides', 'Niacinamide', 'Resveratrol'],
+    clashes: [],
+    details: 'NAD+ (Nicotinamide Adenine Dinucleotide) and its precursors (like NMN) are critical coenzymes found in every living cell. They regulate cellular energy (ATP) production and DNA repair. As we age, NAD+ levels decline drastically, leading to mitochondrial dysfunction. Topical NAD+ aims to restore cellular energy and promote "skin longevity" rather than just surface-level anti-aging.'
+  },
+  'Postbiotics': {
+    time: '2-4 weeks for microbiome rebalancing and reduced inflammation.',
+    concerns: ['Sensitive Skin', 'Acne', 'Rosacea', 'Skin Barrier Repair'],
+    worksWith: ['Ceramides', 'Ectoin', 'Niacinamide'],
+    clashes: ['Harsh physical exfoliants', 'Overuse of strong antibacterial agents'],
+    details: 'Postbiotics are the beneficial metabolic byproducts produced by probiotic bacteria (such as enzymes, peptides, and short-chain fatty acids). Unlike live probiotics (which are difficult to stabilize in cosmetics), postbiotics deliver the direct anti-inflammatory and barrier-strengthening benefits of a healthy microbiome immediately.'
+  },
+  'Hypochlorous Acid': {
+    time: 'Immediate soothing, 1-2 weeks for acne and redness reduction.',
+    concerns: ['Acne', 'Rosacea', 'Eczema', 'Sensitive Skin'],
+    worksWith: ['Everything (as a base step)'],
+    clashes: ['Antioxidants like Vitamin C (can oxidize them if applied simultaneously)'],
+    details: 'Hypochlorous acid (HOCl) is naturally produced by our white blood cells to fight infection. Topically, it acts as an incredibly gentle yet highly effective antimicrobial and anti-inflammatory agent, making it perfect for repairing compromised barriers, treating active breakouts, and soothing skin conditions without dryness.'
+  },
+  'Polyglutamic Acid': {
+    time: 'Immediate extreme hydration.',
+    concerns: ['Dry Skin', 'Texture'],
+    worksWith: ['Hyaluronic Acid', 'Ceramides', 'Vitamin C'],
+    clashes: [],
+    details: 'A peptide-based humectant derived from fermented soybeans that can hold up to 4,000 times its weight in water (4x more than hyaluronic acid). It forms a microgel film on the skin surface, preventing water loss and creating an incredibly smooth, glass-like finish.'
   }
 };
 
@@ -125,12 +188,18 @@ const defaultFact = {
 
 const getFact = (title) => {
   for (const [ing, fact] of Object.entries(ingredientFacts)) {
-    if (title.includes(ing)) return fact;
+    if (title.includes(ing) || title.includes(ing.toLowerCase())) return fact;
   }
   return defaultFact;
 };
 
 const seoKeywords = {
+  'PDRN': ['pdrn benefits', 'pdrn serum', 'how long does pdrn take to work', 'pdrn or retinol', 'pdrn anti aging', 'pdrn meaning', 'pdrn retinol routine', 'pdrn vitamin c', 'pdrn results timeline', 'pdrn barrier repair', 'pdrn hyperpigmentation', 'pdrn acne scars'],
+  'Ectoin': ['ectoin benefits', 'ectoin skincare', 'ectoin hydration', 'ectoin skin barrier', 'ectoin results', 'ectoin redness', 'ectoin retinol routine', 'ectoin barrier repair', 'ectoin skincare 2026', 'ectoin trend'],
+  'Copper Peptides': ['copper peptide benefits', 'copper peptide or retinol', 'copper tripeptide', 'copper peptide results', 'copper peptides anti aging', 'copper peptides damaged skin', 'copper peptide retinol', 'copper peptide routine', 'copper peptides irritation'],
+  'Longevity': ['longevity skincare', 'longevity skincare meaning', 'longevity skincare ingredients', 'peptides anti aging', 'nad+ serum', 'nad skincare benefits', 'nad precursor skincare', 'growth factor skincare', 'regenerative skin care ingredients'],
+  'Exosomes': ['exosome serum', 'pdrn vs exosomes', 'exosome skincare', 'plant derived exosomes', 'exosomes topical skincare', 'regenerative skincare ingredients'],
+  'Microbiome': ['skin barrier repair', 'damaged barrier recovery', 'barrier ingredients', 'postbiotic skincare benefits', 'microbiome skincare', 'skin microbiome', 'hypochlorous acid skincare', 'polyglutamic acid skincare'],
   'Niacinamide': [
     'how long does niacinamide take to work on acne', 'how long does niacinamide take to fade dark spots', 'how long does niacinamide take to control oil', 'when does niacinamide start working', 'when will I see results from niacinamide', 'niacinamide results after 2 weeks', 'niacinamide results after 4 weeks', 'niacinamide results after 8 weeks', 'can niacinamide make skin dry', 'can niacinamide cause breakouts', 'can niacinamide reduce pore appearance', 'niacinamide for uneven skin texture', 'niacinamide for post acne marks', 'niacinamide for redness and sensitive skin', 'best time to use niacinamide'
   ],
@@ -179,6 +248,12 @@ function generateContent(title, category) {
     combos = ['niacinamide and retinol routine for beginners', 'niacinamide or retinol first', 'niacinamide before or after retinol', 'how long to wait between niacinamide and retinol', 'niacinamide and retinol morning or night'];
   } else if (title.toLowerCase().includes('niacinamide') && title.toLowerCase().includes('vitamin c')) {
     combos = ['niacinamide and vitamin c routine', 'niacinamide or vitamin c first'];
+  } else if (title.toLowerCase().includes('pdrn') || title.toLowerCase().includes('polynucleotides')) {
+    combos = ['pdrn results timeline', 'pdrn barrier repair'];
+  } else if (title.toLowerCase().includes('ectoin')) {
+    combos = ['ectoin skincare 2026', 'ectoin trend'];
+  } else if (title.toLowerCase().includes('copper peptides')) {
+    combos = ['copper peptides anti aging', 'copper peptides damaged skin'];
   }
 
   // Pick random keywords to inject naturally
@@ -269,25 +344,42 @@ const clusters = {
     'How Long Does Glycolic Acid Take to Work?', 'How Long Does Retinal Take to Work?', 'How Long Does Bakuchiol Take to Work?',
     'How Long Does Tranexamic Acid Take to Work?', 'How Long Does Kojic Acid Take to Work?', 'How Long Does Ceramide Take to Repair Skin?',
     'How Long Does Skin Barrier Repair Take?', 'How Long Does Skincare Take to Work?', 'How Long Does It Take for Acne Skincare to Work?',
-    'How Long Does It Take for Dark Spot Products to Work?', 'How Long Does It Take for a New Skincare Routine to Work?'
+    'How Long Does It Take for Dark Spot Products to Work?', 'How Long Does It Take for a New Skincare Routine to Work?',
+    'How Long Does PDRN Take to Work?', 'How Long Does Ectoin Take to Work?', 'How Long Do Copper Peptides Take to Work?'
   ],
   'Ingredient Focus': [
     'Niacinamide for Oily Skin', 'Niacinamide for Sensitive Skin', 'Niacinamide for Large Pores', 'Niacinamide for Dark Spots', 'Niacinamide for Uneven Skin Tone',
     'Retinol for Oily Skin', 'Retinol for Sensitive Skin', 'Retinol for Dark Spots', 'Retinol for Acne Scars', 'Retinol for Large Pores',
     'Azelaic Acid for Dark Spots', 'Azelaic Acid for Sensitive Skin', 'Azelaic Acid for Acne Marks', 'Salicylic Acid for Large Pores', 'Salicylic Acid for Oily Skin',
-    'Peptides for Sensitive Skin', 'Peptides for Skin Barrier Repair', 'Hyaluronic Acid for Sensitive Skin', 'Vitamin C for Uneven Skin Tone', 'Tranexamic Acid for Dark Spots'
+    'Peptides for Sensitive Skin', 'Peptides for Skin Barrier Repair', 'Hyaluronic Acid for Sensitive Skin', 'Vitamin C for Uneven Skin Tone', 'Tranexamic Acid for Dark Spots',
+    'PDRN for Skin: Benefits, Results & How Long It Takes to Work', 'Is PDRN Good for a Damaged Skin Barrier?', 'PDRN for Dark Spots: Does It Actually Work?', 'PDRN for Acne: Benefits, Risks & What to Expect',
+    'Ectoin for Skin: Benefits, Uses & Side Effects', 'Ectoin for Sensitive Skin: Is It Worth Using?', 'Ectoin for Damaged Skin Barrier', 'Why Is Ectoin Trending in Skincare in 2026?',
+    'Copper Peptides for Skin: Benefits & Results', 'Copper Peptides for Fine Lines & Wrinkles', 'Copper Peptides for Skin Barrier Repair', 'Copper Peptides for Sensitive Skin', 'What Are Next-Generation Peptides in Skincare?'
   ],
   'Combinations': [
     'Can You Use Niacinamide With Retinol?', 'Can You Use Niacinamide With Vitamin C?', 'Can You Use Niacinamide With Salicylic Acid?', 'Can You Use Niacinamide With AHA?',
     'Can You Use Retinol With Vitamin C?', 'Can You Use Retinol With Salicylic Acid?', 'Can You Use Retinol With Hyaluronic Acid?', 'Can You Use Retinol With Peptides?',
     'Can You Use Retinol With Azelaic Acid?', 'Can You Use Vitamin C With Salicylic Acid?', 'Can You Use Vitamin C With Hyaluronic Acid?', 'Can You Use Vitamin C With Peptides?',
     'Can You Use Azelaic Acid With Niacinamide?', 'Can You Use Azelaic Acid With Retinol?', 'Can You Use Azelaic Acid With Vitamin C?', 'Can You Use Salicylic Acid With Niacinamide?',
-    'Can You Use Salicylic Acid With Hyaluronic Acid?', 'Can You Use Peptides With Retinol?', 'Can You Use Peptides With Vitamin C?', 'Can You Use Tranexamic Acid With Niacinamide?'
+    'Can You Use Salicylic Acid With Hyaluronic Acid?', 'Can You Use Peptides With Retinol?', 'Can You Use Peptides With Vitamin C?', 'Can You Use Tranexamic Acid With Niacinamide?',
+    'Can You Use PDRN With Retinol?', 'Can You Use PDRN With Vitamin C?', 'Can You Use Ectoin With Retinol?', 'Can You Use Copper Peptides With Retinol?', 'Can You Use Copper Peptides With Vitamin C?'
   ],
   'Comparisons': [
     'Niacinamide vs Vitamin C', 'Retinol vs Retinal', 'Retinol vs Bakuchiol', 'Niacinamide vs Azelaic Acid', 'Salicylic Acid vs Azelaic Acid',
     'Vitamin C vs Niacinamide for Dark Spots', 'Retinol vs Salicylic Acid for Acne', 'Hyaluronic Acid vs Niacinamide', 'Peptides vs Retinol', 'Peptides vs Hyaluronic Acid',
-    'Azelaic Acid vs Niacinamide for Acne', 'Tranexamic Acid vs Vitamin C for Dark Spots', 'Retinol vs Peptides for Anti Aging', 'AHA vs BHA for Acne', 'Retinal vs Bakuchiol'
+    'Azelaic Acid vs Niacinamide for Acne', 'Tranexamic Acid vs Vitamin C for Dark Spots', 'Retinol vs Peptides for Anti Aging', 'AHA vs BHA for Acne', 'Retinal vs Bakuchiol',
+    'PDRN vs Retinol: Which Is Better for Skin?', 'PDRN vs Peptides: What\'s Better for Skin?', 'PDRN vs Polynucleotides: What\'s the Difference?', 
+    'Ectoin vs Hyaluronic Acid: Which Hydrates Better?', 'Ectoin vs Ceramides: What\'s Better for Skin Barrier Repair?',
+    'Copper Peptides vs Retinol', 'Copper Peptides vs Peptides: What\'s the Difference?', 'Exosomes vs PDRN: What\'s the Difference?', 'Exosomes vs Peptides for Skin', 'PDRN vs Exosomes vs Peptides'
+  ],
+  'Longevity & Biotech': [
+    'What Is Skin Longevity? The New Approach to Anti-Aging', 'Skin Longevity vs Anti-Aging: What\'s the Difference?', 'Best Ingredients for Skin Longevity', 'Peptides for Skin Longevity: Do They Work?',
+    'NAD+ Skincare: Benefits, Evidence & What to Know', 'NMN vs NAD+ Skincare: What\'s the Difference?', 'Growth Factors vs Peptides for Skin', 'What Is Regenerative Skincare?',
+    'Exosomes in Skincare: What Are They?', 'Plant Exosomes in Skincare: Do They Work?', 'Exosome Serum: Benefits, Risks & What to Know'
+  ],
+  'Microbiome & Barrier': [
+    'How to Repair a Damaged Skin Barrier', 'Ectoin vs Ceramides for Skin Barrier Repair', 'What Are Postbiotics in Skincare?', 
+    'Prebiotics vs Probiotics vs Postbiotics for Skin', 'Microbiome Skincare: What Does It Actually Mean?', 'Hypochlorous Acid for Skin: Benefits & How to Use It', 'Polyglutamic Acid vs Hyaluronic Acid'
   ],
   'Troubleshooting': [
     'Why Is My Skincare Not Working?', 'Why Is My Skincare Routine Not Working?', 'Why Is My Retinol Not Working?', 'Why Is My Niacinamide Not Working?', 'Why Is My Vitamin C Not Working?',
@@ -322,7 +414,7 @@ async function fetchBestImage(query) {
 
 async function generateAll() {
   const blogs = [];
-  console.log("Generating 100 SEO-optimized, highly detailed blog posts with targeted thumbnails...");
+  console.log("Generating 150 SEO-optimized, highly detailed blog posts with targeted thumbnails...");
 
   const fallbacks = [
     'https://images.unsplash.com/photo-1556228578-0d85b1a4d571?q=80&w=1200',
@@ -333,7 +425,10 @@ async function generateAll() {
   for (const [category, titles] of Object.entries(clusters)) {
     for (const title of titles) {
       // Create a highly specific search query for the best possible image
-      let searchQuery = title.replace(/How Long Does|Take to Work\?|Why Is My|Not Working\?|for|vs/gi, '').trim();
+      let searchQuery = title.replace(/How Long Does|Take to Work\?|Why Is My|Not Working\?|for|vs|What Are|What Is|Benefits/gi, '').trim();
+      if (searchQuery.includes('PDRN') || searchQuery.includes('Polynucleotides')) searchQuery = 'dna genetics science';
+      if (searchQuery.includes('Exosomes')) searchQuery = 'cellular biology science';
+      if (searchQuery.includes('Microbiome') || searchQuery.includes('Postbiotics')) searchQuery = 'microscope biology';
       if (!searchQuery || searchQuery.length < 3) searchQuery = 'skincare routine';
       
       let coverImage = await fetchBestImage(searchQuery);
