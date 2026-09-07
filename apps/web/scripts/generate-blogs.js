@@ -13,114 +13,114 @@ const ingredientFacts = {
     concerns: ['Oily Skin', 'Sensitive Skin', 'Large Pores', 'Dark Spots', 'Uneven Skin Tone'],
     worksWith: ['Retinol', 'Vitamin C', 'Salicylic Acid', 'AHA', 'Azelaic Acid', 'Tranexamic Acid'],
     clashes: [],
-    details: 'Niacinamide (Vitamin B3) is a powerful antioxidant that helps build keratin, keeping your skin firm and healthy. It also helps your skin grow a ceramide (lipid) barrier, which can in turn helps retain moisture.'
+    details: 'Niacinamide (Vitamin B3) is a powerful antioxidant that helps build keratin, keeping your skin firm and healthy. It also helps your skin grow a ceramide (lipid) barrier, which can in turn helps retain moisture. Clinical studies demonstrate that a 4% concentration of niacinamide significantly improves skin texture and hyperpigmentation.'
   },
   'Retinol': {
     time: '4-6 weeks for acne/texture, 3-6 months for fine lines and collagen production.',
     concerns: ['Oily Skin', 'Sensitive Skin', 'Dark Spots', 'Acne Scars', 'Large Pores', 'Anti Aging'],
     worksWith: ['Niacinamide', 'Hyaluronic Acid', 'Peptides', 'Azelaic Acid'],
     clashes: ['Vitamin C', 'Salicylic Acid', 'AHA', 'BHA'],
-    details: 'Retinol accelerates cell turnover and boosts collagen production. It is the gold standard in anti-aging and acne treatment, but requires an adjustment period (retinization).'
+    details: 'Retinol accelerates cell turnover and boosts collagen production. It is the gold standard in anti-aging and acne treatment, but requires an adjustment period (retinization). It binds to retinoic acid receptors in the skin to physically alter how cells divide and behave.'
   },
   'Vitamin C': {
     time: '3-4 weeks for glow, 8-12 weeks for dark spots and collagen synthesis.',
     concerns: ['Uneven Skin Tone', 'Dark Spots'],
     worksWith: ['Hyaluronic Acid', 'Peptides'],
     clashes: ['Retinol', 'Salicylic Acid', 'AHA', 'BHA', 'Niacinamide (in some unstable formulations)'],
-    details: 'A potent antioxidant that neutralizes free radicals, brightens complexion, and prevents premature aging.'
+    details: 'A potent antioxidant that neutralizes free radicals, brightens complexion, and prevents premature aging. L-ascorbic acid is the most potent but unstable form, while derivatives like THD ascorbate offer better stability and penetration for sensitive skin types.'
   },
   'Hyaluronic Acid': {
     time: 'Immediate plumping, 2-4 weeks for sustained barrier hydration.',
     concerns: ['Sensitive Skin', 'Dry Skin'],
     worksWith: ['Retinol', 'Vitamin C', 'Niacinamide', 'Salicylic Acid'],
     clashes: [],
-    details: 'A humectant capable of holding 1000x its weight in water, drawing moisture into the skin.'
+    details: 'A humectant capable of holding 1000x its weight in water, drawing moisture into the skin. Multi-molecular weight hyaluronic acid is ideal because larger molecules hydrate the surface while smaller molecules penetrate deeper into the epidermis.'
   },
   'Salicylic Acid': {
     time: '2-4 weeks to clear pores, 6-8 weeks for significant acne reduction.',
     concerns: ['Large Pores', 'Oily Skin', 'Acne'],
     worksWith: ['Niacinamide', 'Hyaluronic Acid'],
     clashes: ['Retinol', 'Vitamin C', 'AHA'],
-    details: 'A beta-hydroxy acid (BHA) that penetrates deep into pores to dissolve oil and dead skin cells.'
+    details: 'A beta-hydroxy acid (BHA) that penetrates deep into pores to dissolve oil and dead skin cells. Because it is oil-soluble, it is uniquely capable of exfoliating inside the pore lining, making it the gold standard for blackheads and congested skin.'
   },
   'Azelaic Acid': {
     time: '4-8 weeks for redness and hyperpigmentation.',
     concerns: ['Dark Spots', 'Sensitive Skin', 'Acne Marks', 'Rosacea'],
     worksWith: ['Niacinamide', 'Retinol', 'Vitamin C'],
     clashes: [],
-    details: 'A gentle acid with antibacterial and anti-inflammatory properties, excellent for rosacea and post-acne marks.'
+    details: 'A gentle acid with antibacterial and anti-inflammatory properties, excellent for rosacea and post-acne marks. It is a tyrosinase inhibitor, meaning it directly blocks the enzyme that causes hyperpigmentation without damaging surrounding tissue.'
   },
   'Peptides': {
     time: '4-12 weeks for improved firmness and barrier repair.',
     concerns: ['Sensitive Skin', 'Skin Barrier Repair', 'Anti Aging'],
     worksWith: ['Retinol', 'Vitamin C', 'Hyaluronic Acid'],
     clashes: ['Strong Acids (AHA/BHA)'],
-    details: 'Short chains of amino acids that act as building blocks of proteins such as collagen, elastin and keratin.'
+    details: 'Short chains of amino acids that act as building blocks of proteins such as collagen, elastin and keratin. Signal peptides instruct the skin to produce more collagen, while carrier peptides deliver trace minerals like copper to aid in wound healing.'
   },
   'Snail Mucin': {
     time: '1-2 weeks for hydration, 4-6 weeks for texture improvement.',
     concerns: ['Skin Barrier Repair', 'Dry Skin'],
     worksWith: ['Retinol', 'Vitamin C', 'Niacinamide', 'Salicylic Acid'],
     clashes: [],
-    details: 'Rich in glycoproteins, hyaluronic acid, and glycolic acid, it deeply hydrates and repairs the skin barrier.'
+    details: 'Rich in glycoproteins, hyaluronic acid, and glycolic acid, it deeply hydrates and repairs the skin barrier. It naturally contains antimicrobial properties and helps regenerate damaged skin cells rapidly.'
   },
   'Benzoyl Peroxide': {
     time: '3-4 weeks for acne reduction.',
     concerns: ['Acne'],
     worksWith: ['Hyaluronic Acid', 'Niacinamide'],
     clashes: ['Retinol', 'Vitamin C'],
-    details: 'An antiseptic that reduces the number of acne-causing bacteria on the surface of the skin.'
+    details: 'An antiseptic that reduces the number of acne-causing bacteria on the surface of the skin. Unlike antibiotics, bacteria cannot become resistant to benzoyl peroxide because it works by introducing oxygen into the pore, killing anaerobic bacteria.'
   },
   'Glycolic Acid': {
     time: 'Immediate glow, 4-8 weeks for hyperpigmentation.',
     concerns: ['Uneven Skin Tone', 'Dark Spots', 'Texture'],
     worksWith: ['Hyaluronic Acid'],
     clashes: ['Retinol', 'Vitamin C', 'Salicylic Acid'],
-    details: 'An alpha-hydroxy acid (AHA) that exfoliates the outermost layer of skin to reveal brighter, newer skin.'
+    details: 'An alpha-hydroxy acid (AHA) that exfoliates the outermost layer of skin to reveal brighter, newer skin. It has the smallest molecular weight of all AHAs, allowing it to penetrate the deepest and yield the most dramatic textural improvements.'
   },
   'Retinal': {
     time: '3-4 weeks for texture, 2-4 months for fine lines (works up to 11x faster than retinol).',
     concerns: ['Anti Aging', 'Texture'],
     worksWith: ['Niacinamide', 'Hyaluronic Acid', 'Peptides'],
     clashes: ['Vitamin C', 'Salicylic Acid', 'AHA', 'BHA'],
-    details: 'A direct precursor to retinoic acid, making it faster-acting than traditional retinol while often being less irritating.'
+    details: 'A direct precursor to retinoic acid, making it faster-acting than traditional retinol while often being less irritating. It only requires one conversion step in the skin, making its clinical efficacy much closer to prescription tretinoin.'
   },
   'Bakuchiol': {
     time: '8-12 weeks for anti-aging benefits.',
     concerns: ['Sensitive Skin', 'Anti Aging'],
     worksWith: ['Vitamin C', 'Niacinamide', 'Hyaluronic Acid', 'Salicylic Acid', 'Retinol (sometimes)'],
     clashes: [],
-    details: 'A plant-based alternative to retinol that provides similar anti-aging benefits without the typical irritation.'
+    details: 'A plant-based alternative to retinol that provides similar anti-aging benefits without the typical irritation. It functions through similar cellular pathways to retinoids, upregulating collagen types I, III, and IV.'
   },
   'Tranexamic Acid': {
     time: '8-12 weeks for melasma and dark spots.',
     concerns: ['Dark Spots', 'Uneven Skin Tone'],
     worksWith: ['Niacinamide', 'Vitamin C', 'Hyaluronic Acid'],
     clashes: [],
-    details: 'An amino acid derivative that interrupts the pathways leading to melanin synthesis, effectively fading discoloration.'
+    details: 'An amino acid derivative that interrupts the pathways leading to melanin synthesis, effectively fading discoloration. It is particularly uniquely effective at treating stubborn melasma that is resistant to other tyrosinase inhibitors.'
   },
   'Kojic Acid': {
     time: '4-8 weeks for hyperpigmentation.',
     concerns: ['Dark Spots', 'Uneven Skin Tone'],
     worksWith: ['Niacinamide', 'Vitamin C'],
     clashes: [],
-    details: 'A chemical produced from different types of fungi that inhibits melanin production.'
+    details: 'A chemical produced from different types of fungi that inhibits melanin production. It acts as a chelating agent, binding to the copper ions necessary for tyrosinase activity.'
   },
   'Ceramide': {
     time: '1-2 weeks for barrier restoration.',
     concerns: ['Skin Barrier Repair', 'Sensitive Skin'],
     worksWith: ['Everything'],
     clashes: [],
-    details: 'Lipids (fats) that are found naturally in high concentrations in the uppermost layers of skin, crucial for a healthy barrier.'
+    details: 'Lipids (fats) that are found naturally in high concentrations in the uppermost layers of skin, crucial for a healthy barrier. Without the proper ratio of ceramides, cholesterol, and fatty acids, the skin experiences transepidermal water loss (TEWL).'
   }
 };
 
 const defaultFact = {
   time: '4-8 weeks depending on cellular turnover.',
   concerns: ['General Health'],
-  worksWith: ['Moisturizer'],
+  worksWith: ['Moisturizer', 'Hyaluronic Acid'],
   clashes: [],
-  details: 'A critical component of a healthy skincare routine.'
+  details: 'A critical component of a healthy skincare routine. By maintaining consistency and protecting the skin barrier, you allow the active compounds to penetrate efficiently without causing micro-inflammation.'
 };
 
 const getFact = (title) => {
@@ -130,82 +130,76 @@ const getFact = (title) => {
   return defaultFact;
 };
 
-// Generate content based on title cluster
+// Generate highly detailed SEO content
 function generateContent(title, category) {
   const fact = getFact(title);
+  const primaryIngredient = Object.keys(ingredientFacts).find(ing => title.includes(ing)) || title.split(' ')[0];
   
-  if (category === 'Timeline') {
-    return `
-## The Short Answer
-If you are wondering **${title.toLowerCase()}**, the clinical answer is typically **${fact.time}**. However, this depends entirely on your skin barrier health and consistency.
+  let markdown = `
+## Introduction: The Science of ${primaryIngredient}
+If you are wondering about **${title.toLowerCase()}**, you are not alone. Dermatology clinics receive this question constantly. The clinical answer is typically **${fact.time}**. However, this depends entirely on your skin barrier health, the formulation you are using, and your consistency.
 
-## The Science Behind It
 ${fact.details}
 
+## The Biological Timeline
 When you apply this to your skin, it doesn't work overnight. Skincare is a marathon, not a sprint. The skin operates on a 28-day cellular turnover cycle (which slows down as we age). This means any product you use needs at least one full cycle to show true results at the cellular level.
 
-## Phase 1: The Initial Reaction (Days 1-7)
-During the first week, you might experience either immediate hydration (in the case of humectants) or a slight "purge" if you are using an active ingredient that accelerates cell turnover. Don't panic—this means it's working. Focus on hydration and barrier support.
+### Phase 1: The Initial Reaction (Days 1-7)
+During the first week, you might experience immediate hydration or a slight "purge" if you are using an active ingredient that accelerates cell turnover. Don't panic—this means the active is penetrating the stratum corneum. Focus entirely on hydration and barrier support during this window.
 
-## Phase 2: The Cellular Shift (Weeks 4-6)
-By week four, you've completed one full cycle. This is where the magic happens. You should start seeing a reduction in your primary concerns, whether that is texture, acne, or dullness. 
+### Phase 2: The Cellular Shift (Weeks 4-6)
+By week four, you've completed one full cellular cycle. This is where the magic happens. You should start seeing a visible reduction in your primary concerns, whether that is texture, acne, or dullness. The micro-inflammation should subside.
 
-## Phase 3: The Long-Term Results (Months 3-6)
-Structural changes like collagen production or deep hyperpigmentation fading take time. If you use it consistently for 3 to 6 months, you will see the peak clinical efficacy of the product.
+### Phase 3: The Long-Term Results (Months 3-6)
+Structural changes like collagen production or deep hyperpigmentation fading take significant time. If you use it consistently for 3 to 6 months, you will see the peak clinical efficacy of the product. This is when dermal remodeling occurs.
 
-### How to Track It
-Stop guessing if it's working. The only way to truly know is to track it visually. At Fasade, we built the ultimate tool to measure exactly how your skin is responding over these critical phases.
-    `;
-  }
-  
+`;
+
   if (category === 'Comparisons') {
-    return `
-## Head to Head: Which is right for you?
-When it comes to **${title}**, making the right choice depends heavily on your skin type and specific goals. Both are clinically proven, but they operate through completely different pathways.
+    markdown += `
+## Head to Head Analysis
+When choosing between ingredients for your specific concern, making the right choice depends heavily on your skin type and specific goals. Both are clinically proven, but they operate through completely different pathways.
 
-### The Breakdown
-${fact.details}
-
-## Efficacy and Timeline
-Generally, expect **${fact.time}**. While one might work slightly faster for surface-level issues, the other might provide deeper structural benefits over a 6-month period.
-
-## The Verdict
-You don't always have to choose. In some routines, they can be complementary. However, if your skin is sensitive, start with the gentler option and track your skin's response daily.
-    `;
-  }
-  
-  if (category === 'Combinations') {
-    return `
+### The Verdict
+You don't always have to choose. In some advanced routines, they can be complementary. However, if your skin is sensitive, always start with the gentler option and track your skin's response daily to avoid barrier degradation.
+`;
+  } else if (category === 'Combinations') {
+    markdown += `
 ## The Golden Rule of Mixing
-**${title}** This is one of the most common questions in dermatology. 
-
-Mixing actives can either create a powerhouse routine or lead to a compromised skin barrier.
+Mixing actives can either create a powerhouse routine or lead to a compromised skin barrier. 
 
 ### Can they be mixed?
-Based on clinical chemistry, ${fact.clashes.length > 0 ? `you should be extremely careful mixing this with ${fact.clashes.join(', ')}.` : `yes, this is generally considered a safe and synergistic combination.`}
+Based on clinical chemistry, ${fact.clashes.length > 0 ? `you should be extremely careful mixing this. It famously clashes with **${fact.clashes.join(', ')}**. Mixing these can alter the pH, rendering both useless or causing severe contact dermatitis.` : `yes, this is generally considered a safe and synergistic combination. They work on complementary biological pathways.`}
 
-### How to layer them safely
-1. **Consistency:** Apply from thinnest to thickest consistency.
-2. **pH Levels:** Apply lower pH (more acidic) products first.
-3. **Time of Day:** Consider using one in the morning and one at night to minimize irritation.
-
-### Watch for Irritation
-The most important factor is your skin's tolerance. Monitor for redness, stinging, or excessive dryness. If you notice these, dial back usage immediately to protect your barrier.
-    `;
+### How to Layer Safely
+1. **Viscosity Rule:** Apply from thinnest to thickest consistency (water-based serums before heavy creams).
+2. **pH Dependency:** Apply lower pH (more acidic) products first. Allow them to absorb for 2 minutes.
+3. **Time of Day:** Consider using one in the morning and one at night to minimize irritation while maximizing contact time.
+`;
   }
 
-  return `
-## Understanding Your Skin
-${fact.details}
+  markdown += `
+## Common Mistakes to Avoid
+- **Inconsistency:** Skipping days drastically resets the cellular adaptation period.
+- **Over-application:** Applying more product does not equal faster results. It only increases the risk of irritation. Use a pea-sized amount.
+- **Skipping Sunscreen:** Actives make your skin vulnerable. Failing to use SPF 30+ completely negates any progress you make.
 
-When dealing with this specific concern, patience and consistency are your best friends. Expect results in **${fact.time}**.
+## Frequently Asked Questions (FAQ)
 
-### The Root Cause
-Often, skincare stops working because the skin barrier is compromised, preventing active ingredients from doing their job. 
+### 1. How often should I use this?
+For optimal results, start 2-3 times a week. If your skin tolerates it without redness or stinging, you can gradually increase to daily use. Always listen to your skin barrier.
 
-### The Solution
-Strip your routine back to basics. Cleanser, moisturizer, SPF, and *one* targeted active. Track your progress for 28 days.
+### 2. Can I mix it with other ingredients?
+You can safely mix this with **${fact.worksWith.join(', ')}**. These ingredients are highly complementary and often boost the overall efficacy.
+
+### 3. Why is my skin getting worse?
+If you are experiencing purging (small whiteheads in areas you normally break out), this is normal and lasts 2-4 weeks. However, if you are experiencing redness, burning, or breakouts in completely new areas, this is irritation. Stop immediately and focus on barrier repair.
+
+### How to Track Your Progress
+Stop guessing if it's working. The only way to truly know is to track it visually. The mirror lies, but data doesn't. At Fasade, we built the ultimate tool to measure exactly how your skin is responding over these critical phases. Track your routine, log your barrier health, and finally achieve the results you deserve.
   `;
+
+  return markdown;
 }
 
 const clusters = {
@@ -252,45 +246,67 @@ function toSlug(title) {
   return title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
 }
 
-async function fetchUnsplashImage(query) {
-  try {
-    const res = await fetch(`https://api.unsplash.com/photos/random?query=${encodeURIComponent(query)}&client_id=${UNSPLASH_KEY}&orientation=landscape`);
-    if (!res.ok) return null;
-    const data = await res.json();
-    return data.urls.regular;
-  } catch (e) {
-    return null;
-  }
-}
-
 async function generateAll() {
   const blogs = [];
-  console.log("Generating 100 SEO Blog Posts...");
+  console.log("Fetching 120 images from Unsplash to ensure unique thumbnails...");
+  
+  let imagePool = [];
+  const queries = ['skincare', 'serum', 'cream', 'face'];
+  
+  for (const query of queries) {
+    try {
+      const res = await fetch(`https://api.unsplash.com/search/photos?query=${query}&per_page=30&client_id=${UNSPLASH_KEY}&orientation=landscape`);
+      if (res.ok) {
+        const data = await res.json();
+        imagePool.push(...data.results.map(img => img.urls.regular));
+      }
+    } catch (e) {
+      console.log("Unsplash fetch failed for query", query);
+    }
+  }
+
+  // Deduplicate and fallback
+  imagePool = [...new Set(imagePool)];
+  const fallbacks = [
+    'https://images.unsplash.com/photo-1556228578-0d85b1a4d571?q=80&w=1200',
+    'https://images.unsplash.com/photo-1617897903246-719242758050?q=80&w=1200',
+    'https://images.unsplash.com/photo-1599733594230-6b823276abcc?q=80&w=1200',
+    'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=1200',
+    'https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?q=80&w=1200',
+    'https://images.unsplash.com/photo-1615397323863-12d7088b7da8?q=80&w=1200',
+    'https://images.unsplash.com/photo-1629198688000-71f23e745b6e?q=80&w=1200',
+    'https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=1200'
+  ];
+
+  while (imagePool.length < 100) {
+    imagePool.push(...fallbacks);
+  }
+  
+  // Shuffle pool to ensure randomness
+  imagePool.sort(() => Math.random() - 0.5);
+
+  console.log(`Successfully loaded ${imagePool.length} images.`);
+  console.log("Generating 100 SEO-optimized, highly detailed blog posts...");
 
   for (const [category, titles] of Object.entries(clusters)) {
     for (const title of titles) {
-      // Create a deterministic fallback image if API rate limit hits
-      const searchQuery = title.includes('Skin') ? 'skincare' : (title.split(' ')[0] + ' skin');
-      
-      // Throttle slightly to respect Unsplash API limits
-      await new Promise(r => setTimeout(r, 200)); 
-      
-      let coverImage = await fetchUnsplashImage(searchQuery);
-      if (!coverImage) {
-        coverImage = 'https://images.unsplash.com/photo-1556228578-0d85b1a4d571?q=80&w=1200&auto=format&fit=crop';
-      }
-
+      const coverImage = imagePool.pop();
       const slug = toSlug(title);
-      const excerpt = `Discover the truth about ${title}. Learn the science, the timeline, and how to track your real results.`;
+      const excerpt = `Discover the clinical truth about ${title}. Learn the biological timeline, common mistakes to avoid, and how to track your real results.`;
       
+      // Calculate realistic read time based on text length
+      const content = generateContent(title, category);
+      const wordCount = content.split(' ').length;
+      const readTime = Math.max(3, Math.ceil(wordCount / 200));
+
       blogs.push({
         title,
         slug,
         category,
         excerpt,
-        content: generateContent(title, category),
+        content,
         coverImage,
-        readTime: Math.floor(Math.random() * 4) + 3, // 3-6 mins
+        readTime,
         lastUpdated: new Date().toISOString()
       });
       console.log(`Generated: ${title}`);
