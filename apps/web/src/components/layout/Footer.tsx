@@ -8,8 +8,11 @@ export function Footer() {
   return (
     <footer className="border-t border-blush bg-white px-5 py-12 sm:px-8 lg:px-12">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-8 md:flex-row md:justify-between">
-        <div className="text-center md:text-left">
-          <p className="font-display text-2xl font-semibold text-plum">Fasade</p>
+        <div className="flex flex-col items-center md:items-start text-center md:text-left">
+          <div className="flex items-center gap-2">
+            <img src="/favicon.svg" alt="Fasade logo" className="h-7 w-7" />
+            <p className="font-display text-2xl font-semibold text-plum">Fasade</p>
+          </div>
           <p className="mt-1 text-sm text-charcoal/60">Track Your Skincare Progress.</p>
         </div>
 

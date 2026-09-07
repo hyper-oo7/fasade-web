@@ -41,10 +41,11 @@ export function Navbar() {
       >
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="font-display text-2xl font-semibold tracking-tight text-plum"
+          className="flex items-center gap-2 font-display text-2xl font-semibold tracking-tight text-plum"
           aria-label="Fasade home"
         >
-          Fasade
+          <img src="/favicon.svg" alt="Fasade logo" className="h-7 w-7" />
+          <span>Fasade</span>
         </button>
 
         <div className="hidden items-center gap-8 md:flex">
