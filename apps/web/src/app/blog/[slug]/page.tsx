@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
@@ -60,7 +61,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         },
         "headline": blog.title,
         "image": blog.coverImage ? [blog.coverImage] : [],
-        "datePublished": "2026-06-01T08:00:00Z",
+        "datePublished": blog.datePublished || blog.lastUpdated,
         "dateModified": blog.lastUpdated,
         "author": [{
             "@type": "Organization",
@@ -126,11 +127,12 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           </header>
 
           {blog.coverImage && (
-            <div className="w-full aspect-[21/9] rounded-3xl overflow-hidden mb-12 shadow-lg">
-              <img 
+            <div className="w-full aspect-[21/9] rounded-3xl overflow-hidden mb-12 shadow-lg relative">
+              <Image
                 src={blog.coverImage} 
-                alt={blog.title}
-                className="w-full h-full object-cover"
+                alt={blog.altText || blog.title}
+                fill
+                className="object-cover"
               />
             </div>
           )}
@@ -157,11 +159,12 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
                 <Link key={related.slug} href={`/blog/${related.slug}`} className="group block">
                   <article className="glass rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 h-full flex flex-col">
                     {related.coverImage && (
-                      <div className="aspect-video w-full overflow-hidden bg-mist">
-                        <img 
+                      <div className="aspect-video w-full overflow-hidden bg-mist relative">
+                        <Image
                           src={related.coverImage} 
-                          alt={related.title}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          alt={related.altText || related.title}
+                          fill
+                          className="object-cover group-hover:scale-105 transition-transform duration-500"
                         />
                       </div>
                     )}

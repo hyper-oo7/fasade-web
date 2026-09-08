@@ -558,6 +558,7 @@ async function generateAll() {
       const readTime = Math.max(5, Math.ceil(wordCount / 200));
 
       const excerpt = fact.quickAnswer;
+      const altText = `Illustration for ${title}`;
 
       blogs.push({
         title,
@@ -566,6 +567,7 @@ async function generateAll() {
         excerpt,
         content,
         coverImage,
+        altText,
         readTime,
         lastUpdated: new Date().toISOString()
       });

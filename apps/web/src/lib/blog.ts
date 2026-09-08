@@ -7,8 +7,10 @@ export interface BlogPost {
   excerpt: string;
   content: string;
   coverImage?: string;
+  altText?: string;
   readTime: number;
   lastUpdated: string;
+  datePublished?: string;
 }
 
 export function getAllBlogs(): BlogPost[] {

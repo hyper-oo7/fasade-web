@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
 import { getAllBlogs } from '@/lib/blog'
@@ -47,11 +48,12 @@ export default function BlogIndex() {
                     <Link key={blog.slug} href={`/blog/${blog.slug}`} className="group block">
                       <article className="glass rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 h-full flex flex-col">
                         {blog.coverImage && (
-                          <div className="aspect-video w-full overflow-hidden bg-mist">
-                            <img 
+                          <div className="aspect-video w-full overflow-hidden bg-mist relative">
+                            <Image
                               src={blog.coverImage} 
-                              alt={blog.title}
-                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                              alt={blog.altText || blog.title}
+                              fill
+                              className="object-cover group-hover:scale-105 transition-transform duration-500"
                             />
                           </div>
                         )}

@@ -41,7 +41,12 @@ const orgSchema = {
       "logo": {
         "@type": "ImageObject",
         "url": "https://www.fasade.online/favicon.svg"
-      }
+      },
+      "sameAs": [
+        "https://twitter.com/FasadeApp",
+        "https://instagram.com/fasade.app",
+        "https://tiktok.com/@fasade.app"
+      ]
     }
   ]
 };
