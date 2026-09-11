@@ -1,0 +1,56 @@
+{
+  "nav": {
+    "howItWorks": "Jak to działa",
+    "features": "Funkcje",
+    "knowledgeBase": "Baza wiedzy",
+    "research": "Badania",
+    "faq": "FAQ",
+    "joinWaitlist": "Dołącz do listy"
+  },
+  "hero": {
+    "badge": "Śledzenie postępów pielęgnacji skóry z AI",
+    "headline": "Sprawdź, czy Twoja pielęgnacja skóry",
+    "headlineAccent": "naprawdę działa.",
+    "subtext": "Śledź widoczne poprawy skóry, monitoruj skuteczność produktów i przestań zgadywać, czy Twoja rutyna daje rezultaty.",
+    "cta": "Dołącz do listy oczekujących",
+    "secondary": "Zobacz, jak to działa →",
+    "fine": "Bezpłatne · Wczesny dostęp dla członków listy"
+  },
+  "blog": {
+    "readMore": "Czytaj więcej",
+    "minRead": "min czytania",
+    "updated": "Zaktualizowano",
+    "relatedArticles": "Czytaj dalej",
+    "viewAll": "Zobacz wszystkie artykuły →",
+    "indexTitle": "Nauka wyników",
+    "indexSubtitle": "Przestań zgadywać. Dowiedz się dokładnie, kiedy spodziewać się rezultatów, jak łączyć składniki i jak zoptymalizować swoją rutynę."
+  },
+  "footer": {
+    "tagline": "Śledź swoje postępy w pielęgnacji skóry.",
+    "product": "Produkt",
+    "knowledgeBase": "Baza wiedzy",
+    "copyright": "Wszelkie prawa zastrzeżone. Tylko porady kosmetyczne — nie porady medyczne.",
+    "timelines": "Harmonogramy (Jak długo?)",
+    "longevity": "Długowieczność i Biotech",
+    "microbiome": "Mikrobiom i bariera skórna",
+    "combinations": "Kombinacje składników",
+    "concerns": "Konkretne problemy",
+    "viewAll": "Zobacz ponad 150 przewodników"
+  },
+  "faq": {
+    "title": "Pytania? Mamy odpowiedzi.",
+    "subtitle": "Wszystko, co musisz wiedzieć o Fasade, prywatności i działaniu naszej AI."
+  },
+  "waitlist": {
+    "placeholder": "Wpisz swój e-mail",
+    "button": "Uzyskaj wczesny dostęp",
+    "success": "Jesteś na liście!",
+    "error": "Coś poszło nie tak. Spróbuj ponownie."
+  },
+  "meta": {
+    "siteTitle": "Fasade — Sprawdź, czy Twoja pielęgnacja skóry naprawdę działa",
+    "siteDescription": "Śledź widoczne poprawy skóry, monitoruj skuteczność produktów i przestań zgadywać.",
+    "blogTitle": "Nauka pielęgnacji skóry i przewodnik harmonogramów | Fasade",
+    "blogDescription": "Dowiedz się dokładnie, jak długo działa Twoja pielęgnacja, jak łączyć składniki i dlaczego Twoja rutyna może nie działać."
+  }
+}

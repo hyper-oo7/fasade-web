@@ -1,0 +1,56 @@
+{
+  "nav": {
+    "howItWorks": "Hur det fungerar",
+    "features": "Funktioner",
+    "knowledgeBase": "Kunskapsbas",
+    "research": "Forskning",
+    "faq": "Vanliga frågor",
+    "joinWaitlist": "Gå med i listan"
+  },
+  "hero": {
+    "badge": "AI-driven hudvårdsuppföljning",
+    "headline": "Ta reda på om din hudvård",
+    "headlineAccent": "verkligen fungerar.",
+    "subtext": "Spåra synliga hudförbättringar, övervaka produkteffektivitet och sluta gissa om din rutin ger resultat.",
+    "cta": "Gå med i väntelistan",
+    "secondary": "Se hur det fungerar →",
+    "fine": "Gratis · Tidig åtkomst för listamedlemmar"
+  },
+  "blog": {
+    "readMore": "Läs mer",
+    "minRead": "min läsning",
+    "updated": "Uppdaterad",
+    "relatedArticles": "Fortsätt läsa",
+    "viewAll": "Visa alla artiklar →",
+    "indexTitle": "Vetenskapen bakom resultat",
+    "indexSubtitle": "Sluta gissa. Lär dig exakt när du kan förvänta dig resultat, hur du kombinerar ingredienser och hur du optimerar din rutin."
+  },
+  "footer": {
+    "tagline": "Spåra dina hudvårdsframsteg.",
+    "product": "Produkt",
+    "knowledgeBase": "Kunskapsbas",
+    "copyright": "Alla rättigheter förbehållna. Endast kosmetisk vägledning — inte medicinsk rådgivning.",
+    "timelines": "Tidslinjer (Hur länge?)",
+    "longevity": "Livslängd och Biotek",
+    "microbiome": "Mikrobiom och Hudbarriär",
+    "combinations": "Ingredienskombinationer",
+    "concerns": "Specifika bekymmer",
+    "viewAll": "Visa fler än 150 guider"
+  },
+  "faq": {
+    "title": "Frågor? Vi har svaren.",
+    "subtitle": "Allt du behöver veta om Fasade, integritet och hur vår AI fungerar."
+  },
+  "waitlist": {
+    "placeholder": "Ange din e-post",
+    "button": "Få tidig åtkomst",
+    "success": "Du är på listan!",
+    "error": "Något gick fel. Försök igen."
+  },
+  "meta": {
+    "siteTitle": "Fasade — Ta reda på om din hudvård verkligen fungerar",
+    "siteDescription": "Spåra synliga hudförbättringar, övervaka produkteffektivitet och sluta gissa.",
+    "blogTitle": "Hudvårdsvetenskap och tidslinjeguide | Fasade",
+    "blogDescription": "Förstå exakt hur lång tid din hudvård tar, hur du kombinerar ingredienser och varför din rutin kanske inte fungerar."
+  }
+}

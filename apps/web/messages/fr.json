@@ -1,0 +1,56 @@
+{
+  "nav": {
+    "howItWorks": "Comment ça marche",
+    "features": "Fonctionnalités",
+    "knowledgeBase": "Base de connaissances",
+    "research": "Recherche",
+    "faq": "FAQ",
+    "joinWaitlist": "Rejoindre la liste"
+  },
+  "hero": {
+    "badge": "Suivi de progression cutanée par IA",
+    "headline": "Sachez si votre routine soin est",
+    "headlineAccent": "vraiment efficace.",
+    "subtext": "Suivez les améliorations visibles de votre peau, évaluez l'efficacité de vos produits et arrêtez de deviner si votre routine donne des résultats.",
+    "cta": "Rejoindre la liste d'attente",
+    "secondary": "Voir comment ça marche →",
+    "fine": "Gratuit · Accès prioritaire pour les membres"
+  },
+  "blog": {
+    "readMore": "Lire la suite",
+    "minRead": "min de lecture",
+    "updated": "Mis à jour le",
+    "relatedArticles": "Continuer la lecture",
+    "viewAll": "Voir tous les articles →",
+    "indexTitle": "La science des résultats",
+    "indexSubtitle": "Arrêtez de deviner. Apprenez exactement quand attendre des résultats, comment combiner les ingrédients et comment optimiser votre routine."
+  },
+  "footer": {
+    "tagline": "Suivez vos progrès en soin de la peau.",
+    "product": "Produit",
+    "knowledgeBase": "Base de connaissances",
+    "copyright": "Tous droits réservés. Conseils cosmétiques uniquement — pas de conseil médical.",
+    "timelines": "Délais (Combien de temps ?)",
+    "longevity": "Longévité & Biotechnologie",
+    "microbiome": "Microbiome & Barrière cutanée",
+    "combinations": "Associations d'ingrédients",
+    "concerns": "Préoccupations spécifiques",
+    "viewAll": "Voir plus de 150 guides"
+  },
+  "faq": {
+    "title": "Des questions ? Nous avons les réponses.",
+    "subtitle": "Tout ce que vous devez savoir sur Fasade, la confidentialité et le fonctionnement de notre IA."
+  },
+  "waitlist": {
+    "placeholder": "Entrez votre email",
+    "button": "Obtenir un accès anticipé",
+    "success": "Vous êtes sur la liste !",
+    "error": "Une erreur s'est produite. Veuillez réessayer."
+  },
+  "meta": {
+    "siteTitle": "Fasade — Sachez si votre soin de la peau fonctionne vraiment",
+    "siteDescription": "Suivez les améliorations visibles de votre peau, évaluez l'efficacité de vos produits et arrêtez de deviner si votre routine donne des résultats.",
+    "blogTitle": "Science des soins de la peau & Guide des délais | Fasade",
+    "blogDescription": "Comprenez exactement combien de temps prennent vos soins, comment associer les ingrédients et pourquoi votre routine pourrait ne pas fonctionner."
+  }
+}

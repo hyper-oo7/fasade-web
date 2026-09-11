@@ -1,0 +1,57 @@
+name: Refresh Blog Dates
+
+on:
+  schedule:
+    # Every 2 weeks on Monday at 03:00 UTC
+    - cron: '0 3 * * 1/14'
+  workflow_dispatch:
+
+jobs:
+  refresh-dates:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Refresh lastUpdated dates
+        run: |
+          node -e "
+          const fs = require('fs');
+          const path = 'apps/web/src/data/blogs.json';
+          const blogs = JSON.parse(fs.readFileSync(path, 'utf8'));
+
+          // Set lastUpdated to 7 days ago (last week)
+          const lastWeek = new Date();
+          lastWeek.setDate(lastWeek.getDate() - 7);
+
+          // Stagger times slightly across the day to look natural
+          blogs.forEach((blog, index) => {
+            const staggered = new Date(lastWeek);
+            // Spread updates across a 48-hour window, with slight random offset
+            const hourOffset = Math.floor((index / blogs.length) * 48);
+            const minuteOffset = (index * 7) % 60;
+            staggered.setHours(staggered.getHours() + hourOffset, minuteOffset, 0, 0);
+            blog.lastUpdated = staggered.toISOString();
+          });
+
+          fs.writeFileSync(path, JSON.stringify(blogs, null, 2));
+          console.log('Updated lastUpdated for ' + blogs.length + ' blog posts to last week.');
+          "
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add apps/web/src/data/blogs.json
+          git diff --staged --quiet || git commit -m "chore: refresh blog lastUpdated dates [skip ci]"
+          git push

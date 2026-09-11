@@ -1,0 +1,56 @@
+{
+  "nav": {
+    "howItWorks": "Hoe het werkt",
+    "features": "Functies",
+    "knowledgeBase": "Kennisbank",
+    "research": "Onderzoek",
+    "faq": "Veelgestelde vragen",
+    "joinWaitlist": "Aanmelden voor wachtlijst"
+  },
+  "hero": {
+    "badge": "AI-gestuurde huidvoortgangsregistratie",
+    "headline": "Weet of uw huidverzorging",
+    "headlineAccent": "echt werkt.",
+    "subtext": "Volg zichtbare huidverbeteringen, bewaak producteffectiviteit en stop met gissen of uw routine resultaten oplevert.",
+    "cta": "Aanmelden voor wachtlijst",
+    "secondary": "Zie hoe het werkt →",
+    "fine": "Gratis · Vroege toegang voor wachtlijstleden"
+  },
+  "blog": {
+    "readMore": "Lees meer",
+    "minRead": "min leestijd",
+    "updated": "Bijgewerkt op",
+    "relatedArticles": "Blijf lezen",
+    "viewAll": "Bekijk alle artikelen →",
+    "indexTitle": "De wetenschap van resultaten",
+    "indexSubtitle": "Stop met gissen. Leer precies wanneer u resultaten kunt verwachten, hoe u ingrediënten kunt combineren en hoe u uw routine kunt optimaliseren."
+  },
+  "footer": {
+    "tagline": "Volg uw huidverzorgingsvoortgang.",
+    "product": "Product",
+    "knowledgeBase": "Kennisbank",
+    "copyright": "Alle rechten voorbehouden. Alleen cosmetisch advies — geen medisch advies.",
+    "timelines": "Tijdlijnen (Hoe lang?)",
+    "longevity": "Levensduur & Biotech",
+    "microbiome": "Microbioom & Huidbarrière",
+    "combinations": "Ingrediëntencombinaties",
+    "concerns": "Specifieke zorgen",
+    "viewAll": "Bekijk meer dan 150 gidsen"
+  },
+  "faq": {
+    "title": "Vragen? Wij hebben de antwoorden.",
+    "subtitle": "Alles wat u moet weten over Fasade, privacy en hoe onze AI werkt."
+  },
+  "waitlist": {
+    "placeholder": "Voer uw e-mailadres in",
+    "button": "Vroege toegang krijgen",
+    "success": "U staat op de lijst!",
+    "error": "Er is iets misgegaan. Probeer het opnieuw."
+  },
+  "meta": {
+    "siteTitle": "Fasade — Weet of uw huidverzorging echt werkt",
+    "siteDescription": "Volg zichtbare huidverbeteringen, bewaak producteffectiviteit en stop met gissen.",
+    "blogTitle": "Huidverzorgingswetenschap & tijdlijnhandleiding | Fasade",
+    "blogDescription": "Begrijp precies hoe lang uw huidverzorging duurt, hoe u ingrediënten kunt combineren en waarom uw routine mogelijk niet werkt."
+  }
+}

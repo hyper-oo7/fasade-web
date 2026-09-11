@@ -1,0 +1,56 @@
+{
+  "nav": {
+    "howItWorks": "Como funciona",
+    "features": "Funcionalidades",
+    "knowledgeBase": "Base de conhecimento",
+    "research": "Investigação",
+    "faq": "FAQ",
+    "joinWaitlist": "Juntar à lista"
+  },
+  "hero": {
+    "badge": "Rastreamento de progresso da pele com IA",
+    "headline": "Saiba se a sua rotina de cuidados",
+    "headlineAccent": "realmente funciona.",
+    "subtext": "Acompanhe as melhorias visíveis da pele, monitorize a eficácia dos produtos e pare de adivinhar se a sua rotina está a dar resultados.",
+    "cta": "Juntar à lista de espera",
+    "secondary": "Ver como funciona →",
+    "fine": "Gratuito · Acesso antecipado para membros da lista"
+  },
+  "blog": {
+    "readMore": "Ler mais",
+    "minRead": "min de leitura",
+    "updated": "Atualizado em",
+    "relatedArticles": "Continuar a ler",
+    "viewAll": "Ver todos os artigos →",
+    "indexTitle": "A ciência dos resultados",
+    "indexSubtitle": "Pare de adivinhar. Aprenda exatamente quando esperar resultados, como combinar ingredientes e como otimizar a sua rotina."
+  },
+  "footer": {
+    "tagline": "Acompanhe o seu progresso em cuidados de pele.",
+    "product": "Produto",
+    "knowledgeBase": "Base de conhecimento",
+    "copyright": "Todos os direitos reservados. Apenas orientação cosmética — não é aconselhamento médico.",
+    "timelines": "Cronogramas (Quanto tempo?)",
+    "longevity": "Longevidade e Biotech",
+    "microbiome": "Microbioma e Barreira cutânea",
+    "combinations": "Combinações de ingredientes",
+    "concerns": "Preocupações específicas",
+    "viewAll": "Ver mais de 150 guias"
+  },
+  "faq": {
+    "title": "Perguntas? Temos as respostas.",
+    "subtitle": "Tudo o que precisa de saber sobre Fasade, privacidade e como funciona a nossa IA."
+  },
+  "waitlist": {
+    "placeholder": "Insira o seu e-mail",
+    "button": "Obter acesso antecipado",
+    "success": "Está na lista!",
+    "error": "Algo correu mal. Por favor, tente novamente."
+  },
+  "meta": {
+    "siteTitle": "Fasade — Saiba se os seus cuidados de pele realmente funcionam",
+    "siteDescription": "Acompanhe as melhorias visíveis da pele, monitorize a eficácia dos produtos e pare de adivinhar.",
+    "blogTitle": "Ciência dos cuidados de pele e guia de cronogramas | Fasade",
+    "blogDescription": "Compreenda exatamente quanto tempo demora a sua rotina de cuidados, como combinar ingredientes e por que a sua rotina pode não estar a funcionar."
+  }
+}

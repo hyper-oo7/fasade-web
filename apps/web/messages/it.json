@@ -1,0 +1,56 @@
+{
+  "nav": {
+    "howItWorks": "Come funziona",
+    "features": "Funzionalità",
+    "knowledgeBase": "Base di conoscenza",
+    "research": "Ricerca",
+    "faq": "FAQ",
+    "joinWaitlist": "Unisciti alla lista"
+  },
+  "hero": {
+    "badge": "Monitoraggio del progresso cutaneo con IA",
+    "headline": "Scopri se la tua skincare",
+    "headlineAccent": "funziona davvero.",
+    "subtext": "Monitora i miglioramenti visibili della pelle, valuta l'efficacia dei prodotti e smetti di indovinare se la tua routine dà risultati.",
+    "cta": "Unisciti alla lista d'attesa",
+    "secondary": "Scopri come funziona →",
+    "fine": "Gratis · Accesso anticipato per i membri"
+  },
+  "blog": {
+    "readMore": "Leggi di più",
+    "minRead": "min di lettura",
+    "updated": "Aggiornato il",
+    "relatedArticles": "Continua a leggere",
+    "viewAll": "Vedi tutti gli articoli →",
+    "indexTitle": "La scienza dei risultati",
+    "indexSubtitle": "Smetti di indovinare. Scopri esattamente quando aspettarti risultati, come combinare gli ingredienti e come ottimizzare la tua routine."
+  },
+  "footer": {
+    "tagline": "Monitora i tuoi progressi nella skincare.",
+    "product": "Prodotto",
+    "knowledgeBase": "Base di conoscenza",
+    "copyright": "Tutti i diritti riservati. Solo guida cosmetica — non consiglio medico.",
+    "timelines": "Tempi (Quanto tempo?)",
+    "longevity": "Longevità & Biotech",
+    "microbiome": "Microbioma & Barriera cutanea",
+    "combinations": "Combinazioni di ingredienti",
+    "concerns": "Problemi specifici",
+    "viewAll": "Vedi oltre 150 guide"
+  },
+  "faq": {
+    "title": "Domande? Abbiamo le risposte.",
+    "subtitle": "Tutto quello che devi sapere su Fasade, la privacy e come funziona la nostra IA."
+  },
+  "waitlist": {
+    "placeholder": "Inserisci la tua email",
+    "button": "Ottieni accesso anticipato",
+    "success": "Sei nella lista!",
+    "error": "Qualcosa è andato storto. Riprova."
+  },
+  "meta": {
+    "siteTitle": "Fasade — Scopri se la tua skincare funziona davvero",
+    "siteDescription": "Monitora i miglioramenti visibili della pelle, valuta l'efficacia dei prodotti e smetti di indovinare se la tua routine dà risultati.",
+    "blogTitle": "Scienza della skincare e guida ai tempi | Fasade",
+    "blogDescription": "Scopri esattamente quanto tempo impiega la tua skincare, come combinare gli ingredienti e perché la tua routine potrebbe non funzionare."
+  }
+}

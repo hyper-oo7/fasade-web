@@ -1,0 +1,56 @@
+{
+  "nav": {
+    "howItWorks": "How It Works",
+    "features": "Features",
+    "knowledgeBase": "Knowledge Base",
+    "research": "Research",
+    "faq": "FAQ",
+    "joinWaitlist": "Join Waitlist"
+  },
+  "hero": {
+    "badge": "AI-Powered Skin Progress Tracking",
+    "headline": "Know if your skincare is",
+    "headlineAccent": "actually working.",
+    "subtext": "Track visible skin improvements, monitor product effectiveness, and stop guessing whether your routine is delivering results.",
+    "cta": "Join the Waitlist",
+    "secondary": "See How It Works →",
+    "fine": "Free to join · Early access for waitlist members"
+  },
+  "blog": {
+    "readMore": "Read More",
+    "minRead": "min read",
+    "updated": "Updated",
+    "relatedArticles": "Keep Reading",
+    "viewAll": "View all articles →",
+    "indexTitle": "The Science of Results",
+    "indexSubtitle": "Stop guessing. Learn exactly when to expect results, how to combine ingredients, and how to optimise your routine for your unique skin."
+  },
+  "footer": {
+    "tagline": "Track Your Skincare Progress.",
+    "product": "Product",
+    "knowledgeBase": "Knowledge Base",
+    "copyright": "All rights reserved. Cosmetic guidance only — not medical advice.",
+    "timelines": "Timelines (How Long?)",
+    "longevity": "Longevity & Biotech",
+    "microbiome": "Microbiome & Barrier",
+    "combinations": "Ingredient Mixing",
+    "concerns": "Specific Concerns",
+    "viewAll": "View All 150+ Guides"
+  },
+  "faq": {
+    "title": "Questions? We've got answers.",
+    "subtitle": "Everything you need to know about Fasade, privacy, and how our AI works."
+  },
+  "waitlist": {
+    "placeholder": "Enter your email",
+    "button": "Get Early Access",
+    "success": "You're on the list!",
+    "error": "Something went wrong. Please try again."
+  },
+  "meta": {
+    "siteTitle": "Fasade — Know if Your Skincare Is Actually Working",
+    "siteDescription": "Track visible skin improvements, monitor product effectiveness, and stop guessing whether your routine is delivering results.",
+    "blogTitle": "Skincare Science & Timeline Guide | Fasade",
+    "blogDescription": "Understand exactly how long your skincare takes to work, how to mix ingredients, and why your routine might not be working."
+  }
+}

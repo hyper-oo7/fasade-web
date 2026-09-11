@@ -24,6 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${blog.title} | Fasade`,
     description: blog.excerpt,
+    authors: [{ name: 'Raman Kumar Jha', url: 'https://www.fasade.online' }],
     alternates: {
       canonical: `/blog/${blog.slug}`,
     },
@@ -31,8 +32,19 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title: blog.title,
       description: blog.excerpt,
       type: 'article',
+      publishedTime: blog.datePublished || blog.lastUpdated,
+      modifiedTime: blog.lastUpdated,
+      authors: ['Raman Kumar Jha'],
+      images: blog.coverImage ? [{ url: blog.coverImage, width: 1200, height: 630, alt: blog.altText || blog.title }] : [],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      site: '@FasadeApp',
+      creator: '@FasadeApp',
+      title: blog.title,
+      description: blog.excerpt,
       images: blog.coverImage ? [blog.coverImage] : [],
-    }
+    },
   }
 }
 
@@ -60,22 +72,28 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           "@id": `https://www.fasade.online/blog/${blog.slug}`
         },
         "headline": blog.title,
-        "image": blog.coverImage ? [blog.coverImage] : [],
+        "description": blog.excerpt,
+        "image": blog.coverImage ? [{ "@type": "ImageObject", "url": blog.coverImage, "width": 1200, "height": 630 }] : [],
         "datePublished": blog.datePublished || blog.lastUpdated,
         "dateModified": blog.lastUpdated,
         "author": [{
-            "@type": "Organization",
-            "name": "Fasade",
+            "@type": "Person",
+            "@id": "https://www.fasade.online/#author",
+            "name": "Raman Kumar Jha",
+            "jobTitle": "Founder & Skincare Technology Researcher",
             "url": "https://www.fasade.online"
         }],
         "publisher": {
           "@type": "Organization",
           "name": "Fasade",
+          "url": "https://www.fasade.online",
           "logo": {
             "@type": "ImageObject",
             "url": "https://www.fasade.online/favicon.svg"
           }
-        }
+        },
+        "inLanguage": "en-US",
+        "wordCount": Math.round(blog.content.split(/\s+/).length)
       },
       {
         "@type": "BreadcrumbList",

@@ -1,0 +1,56 @@
+{
+  "nav": {
+    "howItWorks": "Wie es funktioniert",
+    "features": "Funktionen",
+    "knowledgeBase": "Wissensdatenbank",
+    "research": "Forschung",
+    "faq": "FAQ",
+    "joinWaitlist": "Warteliste beitreten"
+  },
+  "hero": {
+    "badge": "KI-gestütztes Hautpflege-Tracking",
+    "headline": "Erfahren Sie, ob Ihre Hautpflege",
+    "headlineAccent": "wirklich wirkt.",
+    "subtext": "Verfolgen Sie sichtbare Hautverbesserungen, überwachen Sie die Produktwirksamkeit und hören Sie auf zu raten, ob Ihre Routine Ergebnisse liefert.",
+    "cta": "Warteliste beitreten",
+    "secondary": "Sehen Sie, wie es funktioniert →",
+    "fine": "Kostenlos · Früher Zugang für Wartelistenmitglieder"
+  },
+  "blog": {
+    "readMore": "Weiterlesen",
+    "minRead": "Min. Lesezeit",
+    "updated": "Aktualisiert am",
+    "relatedArticles": "Weiterlesen",
+    "viewAll": "Alle Artikel anzeigen →",
+    "indexTitle": "Die Wissenschaft der Ergebnisse",
+    "indexSubtitle": "Hören Sie auf zu raten. Erfahren Sie genau, wann Sie Ergebnisse erwarten können, wie Sie Inhaltsstoffe kombinieren und wie Sie Ihre Routine optimieren."
+  },
+  "footer": {
+    "tagline": "Verfolgen Sie Ihren Hautpflegefortschritt.",
+    "product": "Produkt",
+    "knowledgeBase": "Wissensdatenbank",
+    "copyright": "Alle Rechte vorbehalten. Nur kosmetische Beratung — kein medizinischer Rat.",
+    "timelines": "Zeitpläne (Wie lange?)",
+    "longevity": "Langlebigkeit & Biotech",
+    "microbiome": "Mikrobiom & Hautbarriere",
+    "combinations": "Inhaltsstoffkombinationen",
+    "concerns": "Spezifische Anliegen",
+    "viewAll": "Über 150 Leitfäden anzeigen"
+  },
+  "faq": {
+    "title": "Fragen? Wir haben die Antworten.",
+    "subtitle": "Alles, was Sie über Fasade, Datenschutz und die Funktionsweise unserer KI wissen müssen."
+  },
+  "waitlist": {
+    "placeholder": "Geben Sie Ihre E-Mail ein",
+    "button": "Frühen Zugang erhalten",
+    "success": "Sie stehen auf der Liste!",
+    "error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
+  },
+  "meta": {
+    "siteTitle": "Fasade — Erfahren Sie, ob Ihre Hautpflege wirklich funktioniert",
+    "siteDescription": "Verfolgen Sie sichtbare Hautverbesserungen, überwachen Sie die Produktwirksamkeit und hören Sie auf zu raten.",
+    "blogTitle": "Hautpflegewissenschaft & Zeitplan-Leitfaden | Fasade",
+    "blogDescription": "Verstehen Sie genau, wie lange Ihre Hautpflege braucht, wie Sie Inhaltsstoffe kombinieren und warum Ihre Routine möglicherweise nicht funktioniert."
+  }
+}
