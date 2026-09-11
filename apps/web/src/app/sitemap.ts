@@ -52,5 +52,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   )
 
-  return [...homeEntries, ...blogIndexEntries, ...blogPostEntries]
+  // ── Standalone SEO pages ────────────────────────
+  const standalonePages = ['/skin-tracker', '/skincare-routine-timeline', '/ingredient-guide']
+  const standaloneEntries: MetadataRoute.Sitemap = standalonePages.flatMap((path) =>
+    locales.map((locale) => ({
+      url: locale === 'en' ? `${BASE_URL}${path}` : `${BASE_URL}/${locale}${path}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as ChangeFrequency,
+      priority: locale === 'en' ? 0.85 : 0.75,
+      alternates: buildAlternates(path),
+    }))
+  )
+
+  return [...homeEntries, ...blogIndexEntries, ...standaloneEntries, ...blogPostEntries]
 }
