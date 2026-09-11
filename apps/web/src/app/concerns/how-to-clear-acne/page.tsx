@@ -68,29 +68,29 @@ export default function ClearAcnePage() {
               <div className="pillar-card">
                 <h3>1. Excess Sebum Production</h3>
                 <p><strong>The problem:</strong> Sebaceous glands overproduce oil, often triggered by hormones.</p>
-                <p><strong>The solution:</strong> Niacinamide (reduces sebum), Retinoids (normalize gland activity).</p>
+                <p><strong>The solution:</strong> <Link href="/blog/how-long-does-niacinamide-take-to-work">Niacinamide</Link> (reduces sebum), <Link href="/compare/retinol-vs-tretinoin">Retinoids</Link> (normalize gland activity).</p>
               </div>
               <div className="pillar-card">
                 <h3>2. Hyperkeratinization</h3>
                 <p><strong>The problem:</strong> Dead skin cells don't shed properly and stick together, creating a plug (microcomedone).</p>
-                <p><strong>The solution:</strong> Salicylic Acid (BHA), Retinoids (accelerate shedding).</p>
+                <p><strong>The solution:</strong> <Link href="/blog/how-long-does-salicylic-acid-take-to-work">Salicylic Acid (BHA)</Link>, Retinoids (accelerate shedding).</p>
               </div>
               <div className="pillar-card">
                 <h3>3. Bacterial Overgrowth</h3>
                 <p><strong>The problem:</strong> <em>C. acnes</em> bacteria feed on the trapped oil in the oxygen-deprived pore and multiply.</p>
-                <p><strong>The solution:</strong> Benzoyl Peroxide (kills bacteria), Azelaic Acid.</p>
+                <p><strong>The solution:</strong> <Link href="/blog/how-long-does-benzoyl-peroxide-take-to-work">Benzoyl Peroxide</Link> (kills bacteria), Azelaic Acid.</p>
               </div>
               <div className="pillar-card">
                 <h3>4. Inflammation</h3>
                 <p><strong>The problem:</strong> Your immune system attacks the bacteria, causing a red, swollen, painful bump.</p>
-                <p><strong>The solution:</strong> Azelaic Acid, Centella Asiatica, Ice (for immediate swelling).</p>
+                <p><strong>The solution:</strong> <Link href="/blog/how-long-does-azelaic-acid-take-to-work">Azelaic Acid</Link>, Centella Asiatica, Ice (for immediate swelling).</p>
               </div>
             </div>
           </section>
 
           <section className="pillar-section">
             <h2>The Purge vs. Irritation</h2>
-            <p>When you start a strong acne treatment (like Retinol or Salicylic Acid), your skin may get worse before it gets better. This is called a purge.</p>
+            <p>When you start a strong acne treatment (like Retinol or Salicylic Acid), your skin may get worse before it gets better. This is called a purge. (Check our <Link href="/skincare-routine-timeline" style={{color: '#2563eb', textDecoration: 'underline'}}>Skincare Timeline Guide</Link> for exact purge timelines).</p>
             <ul>
               <li><strong>A Purge:</strong> Occurs in areas you normally break out. It consists of existing clogs coming to the surface rapidly. Lasts 2–6 weeks. Keep pushing through.</li>
               <li><strong>Irritation:</strong> Breakouts in new areas, severe redness, burning, stinging, or tiny red bumps (contact dermatitis). Stop immediately and repair your barrier.</li>

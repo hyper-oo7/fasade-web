@@ -74,8 +74,8 @@ export default function NiacinamideVsVitaminCPage() {
                 <tbody>
                   <tr>
                     <td><strong>Primary Mechanism</strong></td>
-                    <td>Blocks melanin transfer; Reduces sebum; Anti-inflammatory</td>
-                    <td>Inhibits melanin production; Neutralizes free radicals (UV)</td>
+                    <td><Link href="/blog/how-long-does-niacinamide-take-to-work">Blocks melanin transfer; Reduces sebum; Anti-inflammatory</Link></td>
+                    <td><Link href="/blog/how-long-does-vitamin-c-take-to-work">Inhibits melanin production; Neutralizes free radicals (UV)</Link></td>
                   </tr>
                   <tr>
                     <td><strong>Best For</strong></td>
@@ -131,7 +131,7 @@ export default function NiacinamideVsVitaminCPage() {
 
           <section className="compare-cta">
             <h2>Track Your Brightening Results</h2>
-            <p>Both Niacinamide and Vitamin C take 8-12 weeks to show significant fading of dark spots. Don't rely on your memory—track your progress objectively.</p>
+            <p>Both <Link href="/blog/how-long-does-niacinamide-take-to-work" style={{color: '#9ca3af', textDecoration: 'underline'}}>Niacinamide</Link> and <Link href="/blog/how-long-does-vitamin-c-take-to-work" style={{color: '#9ca3af', textDecoration: 'underline'}}>Vitamin C</Link> take 8-12 weeks to show significant fading of dark spots. (See the <Link href="/skincare-routine-timeline" style={{color: '#9ca3af', textDecoration: 'underline'}}>Full Skincare Timeline</Link>). Don't rely on your memory—track your progress objectively.</p>
             <Link href="/#waitlist" className="compare-cta-btn">Join the Fasade Waitlist →</Link>
           </section>
         </div>

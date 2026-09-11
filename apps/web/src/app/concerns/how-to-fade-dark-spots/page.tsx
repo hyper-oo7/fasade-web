@@ -95,11 +95,11 @@ export default function DarkSpotsPage() {
           <section className="pillar-section">
             <h2>The Science: How to Block Melanin</h2>
             <p>Melanin is the pigment that gives skin its color. When triggered by UV light, hormones, or inflammation, your melanocytes (pigment factories) overproduce melanin. This melanin is packaged into parcels (melanosomes) and sent to your upper skin cells (keratinocytes).</p>
-            <p>To effectively fade dark spots, you need a "multi-pathway" routine that attacks this process at different stages:</p>
+            <p>To effectively fade dark spots, you need a "multi-pathway" routine that attacks this process at different stages (see our <Link href="/ingredient-guide" style={{color: '#c05621', textDecoration: 'underline'}}>Master Ingredient Guide</Link> for more details):</p>
             <ul>
-              <li><strong>Step 1: Inhibit Production.</strong> Ingredients like <em>Vitamin C</em>, <em>Kojic Acid</em>, and <em>Azelaic Acid</em> inhibit the tyrosinase enzyme, preventing new melanin from being made.</li>
-              <li><strong>Step 2: Block Transfer.</strong> <em>Niacinamide</em> prevents the melanin parcels from being transferred into the visible skin cells.</li>
-              <li><strong>Step 3: Accelerate Shedding.</strong> <em>Retinol</em> and <em>AHAs (Glycolic Acid)</em> speed up cell turnover, shedding the already-pigmented cells faster.</li>
+              <li><strong>Step 1: Inhibit Production.</strong> Ingredients like <Link href="/blog/how-long-does-vitamin-c-take-to-work"><em>Vitamin C</em></Link>, <em>Kojic Acid</em>, and <Link href="/blog/how-long-does-azelaic-acid-take-to-work"><em>Azelaic Acid</em></Link> inhibit the tyrosinase enzyme, preventing new melanin from being made.</li>
+              <li><strong>Step 2: Block Transfer.</strong> <Link href="/blog/how-long-does-niacinamide-take-to-work"><em>Niacinamide</em></Link> prevents the melanin parcels from being transferred into the visible skin cells.</li>
+              <li><strong>Step 3: Accelerate Shedding.</strong> <Link href="/blog/how-long-does-retinol-take-to-work"><em>Retinol</em></Link> and <Link href="/blog/how-long-does-glycolic-acid-take-to-work"><em>AHAs (Glycolic Acid)</em></Link> speed up cell turnover, shedding the already-pigmented cells faster.</li>
             </ul>
           </section>
 

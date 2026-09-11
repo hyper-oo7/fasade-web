@@ -72,7 +72,7 @@ export default function RetinolVsTretinoinPage() {
               </div>
               <div className="pathway-arrow">↓</div>
               <div className="pathway-step highlight-retinol">
-                <strong>Retinol</strong>
+                <strong><Link href="/blog/how-long-does-retinol-take-to-work">Retinol</Link></strong>
                 <span>(2 Conversions) • Gold Standard OTC</span>
               </div>
               <div className="pathway-arrow">↓</div>
@@ -162,7 +162,7 @@ export default function RetinolVsTretinoinPage() {
 
           <section className="compare-cta">
             <h2>Track the "Purge"</h2>
-            <p>Both Retinol and Tretinoin cause a purging phase where skin looks worse before it gets better. Don't quit early. Track your 12-week retinization journey with Fasade.</p>
+            <p>Both <Link href="/blog/how-long-does-retinol-take-to-work" style={{color: '#9ca3af', textDecoration: 'underline'}}>Retinol</Link> and Tretinoin cause a purging phase where skin looks worse before it gets better. Don't quit early. (Read more in our <Link href="/skincare-routine-timeline" style={{color: '#9ca3af', textDecoration: 'underline'}}>Skincare Timeline Guide</Link>). Track your 12-week retinization journey with Fasade.</p>
             <Link href="/#waitlist" className="compare-cta-btn">Join the Fasade Waitlist →</Link>
           </section>
         </div>
