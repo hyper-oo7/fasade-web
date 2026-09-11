@@ -53,7 +53,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
   )
 
   // ── Standalone SEO pages ────────────────────────
-  const standalonePages = ['/skin-tracker', '/skincare-routine-timeline', '/ingredient-guide']
+  const standalonePages = [
+    '/skin-tracker', 
+    '/skincare-routine-timeline', 
+    '/ingredient-guide',
+    '/concerns/how-to-fade-dark-spots',
+    '/concerns/how-to-clear-acne',
+    '/compare/niacinamide-vs-vitamin-c',
+    '/compare/retinol-vs-tretinoin'
+  ]
   const standaloneEntries: MetadataRoute.Sitemap = standalonePages.flatMap((path) =>
     locales.map((locale) => ({
       url: locale === 'en' ? `${BASE_URL}${path}` : `${BASE_URL}/${locale}${path}`,
