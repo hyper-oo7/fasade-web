@@ -1,7 +1,4 @@
 import type { NextConfig } from "next";
-import createNextIntlPlugin from "next-intl/plugin";
-
-const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
 const nextConfig: NextConfig = {
   images: {
@@ -34,8 +31,13 @@ const nextConfig: NextConfig = {
             key: 'X-XSS-Protection',
             value: '1; mode=block',
           },
+        ],
+      },
+      {
+        // Cache static assets (images, fonts, static files) for 1 year
+        source: '/(.*\\.(?:ico|png|jpg|jpeg|svg|webp|avif|woff2?|css|js))',
+        headers: [
           {
-            // Cache static assets for 1 year
             key: 'Cache-Control',
             value: 'public, max-age=31536000, immutable',
           },
@@ -60,4 +62,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default withNextIntl(nextConfig);
+export default nextConfig;
